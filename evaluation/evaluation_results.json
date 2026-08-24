@@ -1,0 +1,681 @@
+{
+  "timestamp": "2026-08-24T13:53:27.228146",
+  "summary": {
+    "basic_chunks_ingested": 18,
+    "structured_chunks_ingested": 24,
+    "basic_hit_at_5": "0/8",
+    "structured_hit_at_5": "7/8"
+  },
+  "retrieval_results": [
+    {
+      "question_id": "Q1",
+      "question": "What is the carry-over cap for a probationary employee under HR-207 section 4.2?",
+      "expected_policy_id": "HR-207",
+      "expected_section": "4.2",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": true,
+      "structured_rank": 1,
+      "structured_score": 0.7277606725692749,
+      "basic_results": [
+        {
+          "chunk_id": "HR-207-basic-002",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.7214453816413879
+        },
+        {
+          "chunk_id": "HR-206-basic-002",
+          "policy_id": "HR-206",
+          "section": "unknown",
+          "score": 0.606589674949646
+        },
+        {
+          "chunk_id": "HR-203-basic-002",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.5983502268791199
+        },
+        {
+          "chunk_id": "HR-205-basic-002",
+          "policy_id": "HR-205",
+          "section": "unknown",
+          "score": 0.5943800806999207
+        },
+        {
+          "chunk_id": "HR-202-basic-002",
+          "policy_id": "HR-202",
+          "section": "unknown",
+          "score": 0.5451025366783142
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-207-4.2-002",
+          "policy_id": "HR-207",
+          "section": "4.2",
+          "score": 0.7277606725692749
+        },
+        {
+          "chunk_id": "HR-202-4.2-002",
+          "policy_id": "HR-202",
+          "section": "4.2",
+          "score": 0.6561006903648376
+        },
+        {
+          "chunk_id": "HR-203-4.2-002",
+          "policy_id": "HR-203",
+          "section": "4.2",
+          "score": 0.6522974967956543
+        },
+        {
+          "chunk_id": "HR-206-4.2-002",
+          "policy_id": "HR-206",
+          "section": "4.2",
+          "score": 0.6512438058853149
+        },
+        {
+          "chunk_id": "HR-204-4.2-002",
+          "policy_id": "HR-204",
+          "section": "4.2",
+          "score": 0.6480444669723511
+        }
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "question": "What is the carry-over cap for a confirmed employee in Bangalore?",
+      "expected_policy_id": "HR-202",
+      "expected_section": "4.2",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": true,
+      "structured_rank": 2,
+      "structured_score": 0.5121661424636841,
+      "basic_results": [
+        {
+          "chunk_id": "HR-207-basic-002",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.5277357697486877
+        },
+        {
+          "chunk_id": "HR-202-basic-001",
+          "policy_id": "HR-202",
+          "section": "unknown",
+          "score": 0.5232682228088379
+        },
+        {
+          "chunk_id": "HR-205-basic-002",
+          "policy_id": "HR-205",
+          "section": "unknown",
+          "score": 0.47607892751693726
+        },
+        {
+          "chunk_id": "HR-206-basic-002",
+          "policy_id": "HR-206",
+          "section": "unknown",
+          "score": 0.46711820363998413
+        },
+        {
+          "chunk_id": "HR-203-basic-002",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.4572986960411072
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-207-4.2-002",
+          "policy_id": "HR-207",
+          "section": "4.2",
+          "score": 0.5405428409576416
+        },
+        {
+          "chunk_id": "HR-202-4.2-002",
+          "policy_id": "HR-202",
+          "section": "4.2",
+          "score": 0.5121661424636841
+        },
+        {
+          "chunk_id": "HR-206-4.2-002",
+          "policy_id": "HR-206",
+          "section": "4.2",
+          "score": 0.5098634362220764
+        },
+        {
+          "chunk_id": "HR-205-4.2-002",
+          "policy_id": "HR-205",
+          "section": "4.2",
+          "score": 0.509556233882904
+        },
+        {
+          "chunk_id": "HR-204-4.2-002",
+          "policy_id": "HR-204",
+          "section": "4.2",
+          "score": 0.5036578178405762
+        }
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "question": "What is the carry-over cap for a confirmed employee in Chennai?",
+      "expected_policy_id": "HR-203",
+      "expected_section": "4.2",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": false,
+      "structured_rank": -1,
+      "structured_score": 0.0,
+      "basic_results": [
+        {
+          "chunk_id": "HR-203-basic-001",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.5480124950408936
+        },
+        {
+          "chunk_id": "HR-207-basic-002",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.5406521558761597
+        },
+        {
+          "chunk_id": "HR-205-basic-002",
+          "policy_id": "HR-205",
+          "section": "unknown",
+          "score": 0.489798903465271
+        },
+        {
+          "chunk_id": "HR-203-basic-002",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.4822784662246704
+        },
+        {
+          "chunk_id": "HR-206-basic-002",
+          "policy_id": "HR-206",
+          "section": "unknown",
+          "score": 0.4801654815673828
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-207-4.2-002",
+          "policy_id": "HR-207",
+          "section": "4.2",
+          "score": 0.5551226139068604
+        },
+        {
+          "chunk_id": "HR-202-4.2-002",
+          "policy_id": "HR-202",
+          "section": "4.2",
+          "score": 0.5270160436630249
+        },
+        {
+          "chunk_id": "HR-205-4.2-002",
+          "policy_id": "HR-205",
+          "section": "4.2",
+          "score": 0.5265293121337891
+        },
+        {
+          "chunk_id": "HR-206-4.2-002",
+          "policy_id": "HR-206",
+          "section": "4.2",
+          "score": 0.5230796337127686
+        },
+        {
+          "chunk_id": "HR-204-4.2-002",
+          "policy_id": "HR-204",
+          "section": "4.2",
+          "score": 0.5207242965698242
+        }
+      ]
+    },
+    {
+      "question_id": "Q4",
+      "question": "What is the carry-over cap for a confirmed employee in Hyderabad?",
+      "expected_policy_id": "HR-204",
+      "expected_section": "4.2",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": true,
+      "structured_rank": 5,
+      "structured_score": 0.5289030075073242,
+      "basic_results": [
+        {
+          "chunk_id": "HR-207-basic-002",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.5550006628036499
+        },
+        {
+          "chunk_id": "HR-204-basic-001",
+          "policy_id": "HR-204",
+          "section": "unknown",
+          "score": 0.5203495025634766
+        },
+        {
+          "chunk_id": "HR-205-basic-002",
+          "policy_id": "HR-205",
+          "section": "unknown",
+          "score": 0.5191617012023926
+        },
+        {
+          "chunk_id": "HR-203-basic-002",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.500298798084259
+        },
+        {
+          "chunk_id": "HR-206-basic-002",
+          "policy_id": "HR-206",
+          "section": "unknown",
+          "score": 0.4994027018547058
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-207-4.2-002",
+          "policy_id": "HR-207",
+          "section": "4.2",
+          "score": 0.5632014274597168
+        },
+        {
+          "chunk_id": "HR-202-4.2-002",
+          "policy_id": "HR-202",
+          "section": "4.2",
+          "score": 0.5341416001319885
+        },
+        {
+          "chunk_id": "HR-205-4.2-002",
+          "policy_id": "HR-205",
+          "section": "4.2",
+          "score": 0.5327683091163635
+        },
+        {
+          "chunk_id": "HR-206-4.2-002",
+          "policy_id": "HR-206",
+          "section": "4.2",
+          "score": 0.5302109718322754
+        },
+        {
+          "chunk_id": "HR-204-4.2-002",
+          "policy_id": "HR-204",
+          "section": "4.2",
+          "score": 0.5289030075073242
+        }
+      ]
+    },
+    {
+      "question_id": "Q5",
+      "question": "How many casual/sick leaves are listed for Bangalore in section 4.3?",
+      "expected_policy_id": "HR-202",
+      "expected_section": "4.3",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": true,
+      "structured_rank": 1,
+      "structured_score": 0.6005598306655884,
+      "basic_results": [
+        {
+          "chunk_id": "HR-202-basic-001",
+          "policy_id": "HR-202",
+          "section": "unknown",
+          "score": 0.5203213691711426
+        },
+        {
+          "chunk_id": "HR-202-basic-003",
+          "policy_id": "HR-202",
+          "section": "unknown",
+          "score": 0.4740062952041626
+        },
+        {
+          "chunk_id": "HR-207-basic-001",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.40884852409362793
+        },
+        {
+          "chunk_id": "HR-207-basic-003",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.4076194167137146
+        },
+        {
+          "chunk_id": "HR-203-basic-001",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.406528115272522
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-202-4.3-003",
+          "policy_id": "HR-202",
+          "section": "4.3",
+          "score": 0.6005598306655884
+        },
+        {
+          "chunk_id": "HR-207-4.3-003",
+          "policy_id": "HR-207",
+          "section": "4.3",
+          "score": 0.5118857622146606
+        },
+        {
+          "chunk_id": "HR-203-4.3-003",
+          "policy_id": "HR-203",
+          "section": "4.3",
+          "score": 0.5042004585266113
+        },
+        {
+          "chunk_id": "HR-206-4.3-003",
+          "policy_id": "HR-206",
+          "section": "4.3",
+          "score": 0.49318188428878784
+        },
+        {
+          "chunk_id": "HR-205-4.3-003",
+          "policy_id": "HR-205",
+          "section": "4.3",
+          "score": 0.4801017642021179
+        }
+      ]
+    },
+    {
+      "question_id": "Q6",
+      "question": "How many privilege leaves are listed for Chennai in section 4.3?",
+      "expected_policy_id": "HR-203",
+      "expected_section": "4.3",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": true,
+      "structured_rank": 1,
+      "structured_score": 0.6732000112533569,
+      "basic_results": [
+        {
+          "chunk_id": "HR-203-basic-001",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.5814985632896423
+        },
+        {
+          "chunk_id": "HR-207-basic-003",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.47171199321746826
+        },
+        {
+          "chunk_id": "HR-207-basic-001",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.4482640027999878
+        },
+        {
+          "chunk_id": "HR-202-basic-001",
+          "policy_id": "HR-202",
+          "section": "unknown",
+          "score": 0.43962740898132324
+        },
+        {
+          "chunk_id": "HR-204-basic-003",
+          "policy_id": "HR-204",
+          "section": "unknown",
+          "score": 0.42786896228790283
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-203-4.3-003",
+          "policy_id": "HR-203",
+          "section": "4.3",
+          "score": 0.6732000112533569
+        },
+        {
+          "chunk_id": "HR-207-4.3-003",
+          "policy_id": "HR-207",
+          "section": "4.3",
+          "score": 0.5695145130157471
+        },
+        {
+          "chunk_id": "HR-202-4.3-003",
+          "policy_id": "HR-202",
+          "section": "4.3",
+          "score": 0.5621970891952515
+        },
+        {
+          "chunk_id": "HR-203-4.1-001",
+          "policy_id": "HR-203",
+          "section": "4.1",
+          "score": 0.5620194673538208
+        },
+        {
+          "chunk_id": "HR-204-4.3-003",
+          "policy_id": "HR-204",
+          "section": "4.3",
+          "score": 0.5499356389045715
+        }
+      ]
+    },
+    {
+      "question_id": "Q7",
+      "question": "What is the carry-over cap for a confirmed employee in Pune?",
+      "expected_policy_id": "HR-205",
+      "expected_section": "4.2",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": true,
+      "structured_rank": 3,
+      "structured_score": 0.5367186665534973,
+      "basic_results": [
+        {
+          "chunk_id": "HR-207-basic-002",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.5449148416519165
+        },
+        {
+          "chunk_id": "HR-205-basic-001",
+          "policy_id": "HR-205",
+          "section": "unknown",
+          "score": 0.5363000631332397
+        },
+        {
+          "chunk_id": "HR-206-basic-002",
+          "policy_id": "HR-206",
+          "section": "unknown",
+          "score": 0.48802149295806885
+        },
+        {
+          "chunk_id": "HR-205-basic-002",
+          "policy_id": "HR-205",
+          "section": "unknown",
+          "score": 0.48787450790405273
+        },
+        {
+          "chunk_id": "HR-203-basic-002",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.4859302043914795
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-207-4.2-002",
+          "policy_id": "HR-207",
+          "section": "4.2",
+          "score": 0.5644887089729309
+        },
+        {
+          "chunk_id": "HR-202-4.2-002",
+          "policy_id": "HR-202",
+          "section": "4.2",
+          "score": 0.5374507904052734
+        },
+        {
+          "chunk_id": "HR-205-4.2-002",
+          "policy_id": "HR-205",
+          "section": "4.2",
+          "score": 0.5367186665534973
+        },
+        {
+          "chunk_id": "HR-206-4.2-002",
+          "policy_id": "HR-206",
+          "section": "4.2",
+          "score": 0.5319231152534485
+        },
+        {
+          "chunk_id": "HR-204-4.2-002",
+          "policy_id": "HR-204",
+          "section": "4.2",
+          "score": 0.52817702293396
+        }
+      ]
+    },
+    {
+      "question_id": "Q8",
+      "question": "What is the carry-over cap for a confirmed employee in Mumbai?",
+      "expected_policy_id": "HR-206",
+      "expected_section": "4.2",
+      "basic_hit": false,
+      "basic_rank": -1,
+      "basic_score": 0.0,
+      "structured_hit": true,
+      "structured_rank": 4,
+      "structured_score": 0.5452939867973328,
+      "basic_results": [
+        {
+          "chunk_id": "HR-207-basic-002",
+          "policy_id": "HR-207",
+          "section": "unknown",
+          "score": 0.5585260987281799
+        },
+        {
+          "chunk_id": "HR-206-basic-001",
+          "policy_id": "HR-206",
+          "section": "unknown",
+          "score": 0.5356804728507996
+        },
+        {
+          "chunk_id": "HR-205-basic-002",
+          "policy_id": "HR-205",
+          "section": "unknown",
+          "score": 0.5072055459022522
+        },
+        {
+          "chunk_id": "HR-206-basic-002",
+          "policy_id": "HR-206",
+          "section": "unknown",
+          "score": 0.4941539168357849
+        },
+        {
+          "chunk_id": "HR-203-basic-002",
+          "policy_id": "HR-203",
+          "section": "unknown",
+          "score": 0.4868825674057007
+        }
+      ],
+      "structured_results": [
+        {
+          "chunk_id": "HR-207-4.2-002",
+          "policy_id": "HR-207",
+          "section": "4.2",
+          "score": 0.5854418277740479
+        },
+        {
+          "chunk_id": "HR-202-4.2-002",
+          "policy_id": "HR-202",
+          "section": "4.2",
+          "score": 0.549687385559082
+        },
+        {
+          "chunk_id": "HR-205-4.2-002",
+          "policy_id": "HR-205",
+          "section": "4.2",
+          "score": 0.5475456118583679
+        },
+        {
+          "chunk_id": "HR-206-4.2-002",
+          "policy_id": "HR-206",
+          "section": "4.2",
+          "score": 0.5452939867973328
+        },
+        {
+          "chunk_id": "HR-204-4.2-002",
+          "policy_id": "HR-204",
+          "section": "4.2",
+          "score": 0.5407717823982239
+        }
+      ]
+    }
+  ],
+  "metadata_filtering": {
+    "query": "What is the carry-over cap for a probationary employee?",
+    "region_filter": "Kerala",
+    "unfiltered": [
+      {
+        "chunk_id": "HR-207-4.2-002",
+        "region": "Kerala",
+        "policy_id": "HR-207",
+        "score": 0.751366376876831
+      },
+      {
+        "chunk_id": "HR-203-4.2-002",
+        "region": "Chennai",
+        "policy_id": "HR-203",
+        "score": 0.64497309923172
+      },
+      {
+        "chunk_id": "HR-205-4.2-002",
+        "region": "Pune",
+        "policy_id": "HR-205",
+        "score": 0.6440275311470032
+      },
+      {
+        "chunk_id": "HR-204-4.2-002",
+        "region": "Hyderabad",
+        "policy_id": "HR-204",
+        "score": 0.6438145637512207
+      },
+      {
+        "chunk_id": "HR-206-4.2-002",
+        "region": "Mumbai",
+        "policy_id": "HR-206",
+        "score": 0.6425521969795227
+      }
+    ],
+    "filtered": [
+      {
+        "chunk_id": "HR-207-4.2-002",
+        "region": "Kerala",
+        "policy_id": "HR-207",
+        "score": 0.751366376876831
+      },
+      {
+        "chunk_id": "HR-207-4.3-003",
+        "region": "Kerala",
+        "policy_id": "HR-207",
+        "score": 0.2543764114379883
+      },
+      {
+        "chunk_id": "HR-207-4.1-001",
+        "region": "Kerala",
+        "policy_id": "HR-207",
+        "score": 0.24834758043289185
+      },
+      {
+        "chunk_id": "HR-207-4.4-004",
+        "region": "Kerala",
+        "policy_id": "HR-207",
+        "score": 0.24104267358779907
+      }
+    ]
+  }
+}
