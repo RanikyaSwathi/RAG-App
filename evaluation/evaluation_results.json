@@ -1,681 +1,1605 @@
 {
-  "timestamp": "2026-08-24T13:53:27.228146",
   "summary": {
-    "basic_chunks_ingested": 18,
-    "structured_chunks_ingested": 24,
-    "basic_hit_at_5": "0/8",
-    "structured_hit_at_5": "7/8"
-  },
-  "retrieval_results": [
-    {
-      "question_id": "Q1",
-      "question": "What is the carry-over cap for a probationary employee under HR-207 section 4.2?",
-      "expected_policy_id": "HR-207",
-      "expected_section": "4.2",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": true,
-      "structured_rank": 1,
-      "structured_score": 0.7277606725692749,
-      "basic_results": [
-        {
-          "chunk_id": "HR-207-basic-002",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.7214453816413879
-        },
-        {
-          "chunk_id": "HR-206-basic-002",
-          "policy_id": "HR-206",
-          "section": "unknown",
-          "score": 0.606589674949646
-        },
-        {
-          "chunk_id": "HR-203-basic-002",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.5983502268791199
-        },
-        {
-          "chunk_id": "HR-205-basic-002",
-          "policy_id": "HR-205",
-          "section": "unknown",
-          "score": 0.5943800806999207
-        },
-        {
-          "chunk_id": "HR-202-basic-002",
-          "policy_id": "HR-202",
-          "section": "unknown",
-          "score": 0.5451025366783142
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-207-4.2-002",
-          "policy_id": "HR-207",
-          "section": "4.2",
-          "score": 0.7277606725692749
-        },
-        {
-          "chunk_id": "HR-202-4.2-002",
-          "policy_id": "HR-202",
-          "section": "4.2",
-          "score": 0.6561006903648376
-        },
-        {
-          "chunk_id": "HR-203-4.2-002",
-          "policy_id": "HR-203",
-          "section": "4.2",
-          "score": 0.6522974967956543
-        },
-        {
-          "chunk_id": "HR-206-4.2-002",
-          "policy_id": "HR-206",
-          "section": "4.2",
-          "score": 0.6512438058853149
-        },
-        {
-          "chunk_id": "HR-204-4.2-002",
-          "policy_id": "HR-204",
-          "section": "4.2",
-          "score": 0.6480444669723511
-        }
-      ]
-    },
-    {
-      "question_id": "Q2",
-      "question": "What is the carry-over cap for a confirmed employee in Bangalore?",
-      "expected_policy_id": "HR-202",
-      "expected_section": "4.2",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": true,
-      "structured_rank": 2,
-      "structured_score": 0.5121661424636841,
-      "basic_results": [
-        {
-          "chunk_id": "HR-207-basic-002",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.5277357697486877
-        },
-        {
-          "chunk_id": "HR-202-basic-001",
-          "policy_id": "HR-202",
-          "section": "unknown",
-          "score": 0.5232682228088379
-        },
-        {
-          "chunk_id": "HR-205-basic-002",
-          "policy_id": "HR-205",
-          "section": "unknown",
-          "score": 0.47607892751693726
-        },
-        {
-          "chunk_id": "HR-206-basic-002",
-          "policy_id": "HR-206",
-          "section": "unknown",
-          "score": 0.46711820363998413
-        },
-        {
-          "chunk_id": "HR-203-basic-002",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.4572986960411072
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-207-4.2-002",
-          "policy_id": "HR-207",
-          "section": "4.2",
-          "score": 0.5405428409576416
-        },
-        {
-          "chunk_id": "HR-202-4.2-002",
-          "policy_id": "HR-202",
-          "section": "4.2",
-          "score": 0.5121661424636841
-        },
-        {
-          "chunk_id": "HR-206-4.2-002",
-          "policy_id": "HR-206",
-          "section": "4.2",
-          "score": 0.5098634362220764
-        },
-        {
-          "chunk_id": "HR-205-4.2-002",
-          "policy_id": "HR-205",
-          "section": "4.2",
-          "score": 0.509556233882904
-        },
-        {
-          "chunk_id": "HR-204-4.2-002",
-          "policy_id": "HR-204",
-          "section": "4.2",
-          "score": 0.5036578178405762
-        }
-      ]
-    },
-    {
-      "question_id": "Q3",
-      "question": "What is the carry-over cap for a confirmed employee in Chennai?",
-      "expected_policy_id": "HR-203",
-      "expected_section": "4.2",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": false,
-      "structured_rank": -1,
-      "structured_score": 0.0,
-      "basic_results": [
-        {
-          "chunk_id": "HR-203-basic-001",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.5480124950408936
-        },
-        {
-          "chunk_id": "HR-207-basic-002",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.5406521558761597
-        },
-        {
-          "chunk_id": "HR-205-basic-002",
-          "policy_id": "HR-205",
-          "section": "unknown",
-          "score": 0.489798903465271
-        },
-        {
-          "chunk_id": "HR-203-basic-002",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.4822784662246704
-        },
-        {
-          "chunk_id": "HR-206-basic-002",
-          "policy_id": "HR-206",
-          "section": "unknown",
-          "score": 0.4801654815673828
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-207-4.2-002",
-          "policy_id": "HR-207",
-          "section": "4.2",
-          "score": 0.5551226139068604
-        },
-        {
-          "chunk_id": "HR-202-4.2-002",
-          "policy_id": "HR-202",
-          "section": "4.2",
-          "score": 0.5270160436630249
-        },
-        {
-          "chunk_id": "HR-205-4.2-002",
-          "policy_id": "HR-205",
-          "section": "4.2",
-          "score": 0.5265293121337891
-        },
-        {
-          "chunk_id": "HR-206-4.2-002",
-          "policy_id": "HR-206",
-          "section": "4.2",
-          "score": 0.5230796337127686
-        },
-        {
-          "chunk_id": "HR-204-4.2-002",
-          "policy_id": "HR-204",
-          "section": "4.2",
-          "score": 0.5207242965698242
-        }
-      ]
-    },
-    {
-      "question_id": "Q4",
-      "question": "What is the carry-over cap for a confirmed employee in Hyderabad?",
-      "expected_policy_id": "HR-204",
-      "expected_section": "4.2",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": true,
-      "structured_rank": 5,
-      "structured_score": 0.5289030075073242,
-      "basic_results": [
-        {
-          "chunk_id": "HR-207-basic-002",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.5550006628036499
-        },
-        {
-          "chunk_id": "HR-204-basic-001",
-          "policy_id": "HR-204",
-          "section": "unknown",
-          "score": 0.5203495025634766
-        },
-        {
-          "chunk_id": "HR-205-basic-002",
-          "policy_id": "HR-205",
-          "section": "unknown",
-          "score": 0.5191617012023926
-        },
-        {
-          "chunk_id": "HR-203-basic-002",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.500298798084259
-        },
-        {
-          "chunk_id": "HR-206-basic-002",
-          "policy_id": "HR-206",
-          "section": "unknown",
-          "score": 0.4994027018547058
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-207-4.2-002",
-          "policy_id": "HR-207",
-          "section": "4.2",
-          "score": 0.5632014274597168
-        },
-        {
-          "chunk_id": "HR-202-4.2-002",
-          "policy_id": "HR-202",
-          "section": "4.2",
-          "score": 0.5341416001319885
-        },
-        {
-          "chunk_id": "HR-205-4.2-002",
-          "policy_id": "HR-205",
-          "section": "4.2",
-          "score": 0.5327683091163635
-        },
-        {
-          "chunk_id": "HR-206-4.2-002",
-          "policy_id": "HR-206",
-          "section": "4.2",
-          "score": 0.5302109718322754
-        },
-        {
-          "chunk_id": "HR-204-4.2-002",
-          "policy_id": "HR-204",
-          "section": "4.2",
-          "score": 0.5289030075073242
-        }
-      ]
-    },
-    {
-      "question_id": "Q5",
-      "question": "How many casual/sick leaves are listed for Bangalore in section 4.3?",
-      "expected_policy_id": "HR-202",
-      "expected_section": "4.3",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": true,
-      "structured_rank": 1,
-      "structured_score": 0.6005598306655884,
-      "basic_results": [
-        {
-          "chunk_id": "HR-202-basic-001",
-          "policy_id": "HR-202",
-          "section": "unknown",
-          "score": 0.5203213691711426
-        },
-        {
-          "chunk_id": "HR-202-basic-003",
-          "policy_id": "HR-202",
-          "section": "unknown",
-          "score": 0.4740062952041626
-        },
-        {
-          "chunk_id": "HR-207-basic-001",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.40884852409362793
-        },
-        {
-          "chunk_id": "HR-207-basic-003",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.4076194167137146
-        },
-        {
-          "chunk_id": "HR-203-basic-001",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.406528115272522
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-202-4.3-003",
-          "policy_id": "HR-202",
-          "section": "4.3",
-          "score": 0.6005598306655884
-        },
-        {
-          "chunk_id": "HR-207-4.3-003",
-          "policy_id": "HR-207",
-          "section": "4.3",
-          "score": 0.5118857622146606
-        },
-        {
-          "chunk_id": "HR-203-4.3-003",
-          "policy_id": "HR-203",
-          "section": "4.3",
-          "score": 0.5042004585266113
-        },
-        {
-          "chunk_id": "HR-206-4.3-003",
-          "policy_id": "HR-206",
-          "section": "4.3",
-          "score": 0.49318188428878784
-        },
-        {
-          "chunk_id": "HR-205-4.3-003",
-          "policy_id": "HR-205",
-          "section": "4.3",
-          "score": 0.4801017642021179
-        }
-      ]
-    },
-    {
-      "question_id": "Q6",
-      "question": "How many privilege leaves are listed for Chennai in section 4.3?",
-      "expected_policy_id": "HR-203",
-      "expected_section": "4.3",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": true,
-      "structured_rank": 1,
-      "structured_score": 0.6732000112533569,
-      "basic_results": [
-        {
-          "chunk_id": "HR-203-basic-001",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.5814985632896423
-        },
-        {
-          "chunk_id": "HR-207-basic-003",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.47171199321746826
-        },
-        {
-          "chunk_id": "HR-207-basic-001",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.4482640027999878
-        },
-        {
-          "chunk_id": "HR-202-basic-001",
-          "policy_id": "HR-202",
-          "section": "unknown",
-          "score": 0.43962740898132324
-        },
-        {
-          "chunk_id": "HR-204-basic-003",
-          "policy_id": "HR-204",
-          "section": "unknown",
-          "score": 0.42786896228790283
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-203-4.3-003",
-          "policy_id": "HR-203",
-          "section": "4.3",
-          "score": 0.6732000112533569
-        },
-        {
-          "chunk_id": "HR-207-4.3-003",
-          "policy_id": "HR-207",
-          "section": "4.3",
-          "score": 0.5695145130157471
-        },
-        {
-          "chunk_id": "HR-202-4.3-003",
-          "policy_id": "HR-202",
-          "section": "4.3",
-          "score": 0.5621970891952515
-        },
-        {
-          "chunk_id": "HR-203-4.1-001",
-          "policy_id": "HR-203",
-          "section": "4.1",
-          "score": 0.5620194673538208
-        },
-        {
-          "chunk_id": "HR-204-4.3-003",
-          "policy_id": "HR-204",
-          "section": "4.3",
-          "score": 0.5499356389045715
-        }
-      ]
-    },
-    {
-      "question_id": "Q7",
-      "question": "What is the carry-over cap for a confirmed employee in Pune?",
-      "expected_policy_id": "HR-205",
-      "expected_section": "4.2",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": true,
-      "structured_rank": 3,
-      "structured_score": 0.5367186665534973,
-      "basic_results": [
-        {
-          "chunk_id": "HR-207-basic-002",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.5449148416519165
-        },
-        {
-          "chunk_id": "HR-205-basic-001",
-          "policy_id": "HR-205",
-          "section": "unknown",
-          "score": 0.5363000631332397
-        },
-        {
-          "chunk_id": "HR-206-basic-002",
-          "policy_id": "HR-206",
-          "section": "unknown",
-          "score": 0.48802149295806885
-        },
-        {
-          "chunk_id": "HR-205-basic-002",
-          "policy_id": "HR-205",
-          "section": "unknown",
-          "score": 0.48787450790405273
-        },
-        {
-          "chunk_id": "HR-203-basic-002",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.4859302043914795
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-207-4.2-002",
-          "policy_id": "HR-207",
-          "section": "4.2",
-          "score": 0.5644887089729309
-        },
-        {
-          "chunk_id": "HR-202-4.2-002",
-          "policy_id": "HR-202",
-          "section": "4.2",
-          "score": 0.5374507904052734
-        },
-        {
-          "chunk_id": "HR-205-4.2-002",
-          "policy_id": "HR-205",
-          "section": "4.2",
-          "score": 0.5367186665534973
-        },
-        {
-          "chunk_id": "HR-206-4.2-002",
-          "policy_id": "HR-206",
-          "section": "4.2",
-          "score": 0.5319231152534485
-        },
-        {
-          "chunk_id": "HR-204-4.2-002",
-          "policy_id": "HR-204",
-          "section": "4.2",
-          "score": 0.52817702293396
-        }
-      ]
-    },
-    {
-      "question_id": "Q8",
-      "question": "What is the carry-over cap for a confirmed employee in Mumbai?",
-      "expected_policy_id": "HR-206",
-      "expected_section": "4.2",
-      "basic_hit": false,
-      "basic_rank": -1,
-      "basic_score": 0.0,
-      "structured_hit": true,
-      "structured_rank": 4,
-      "structured_score": 0.5452939867973328,
-      "basic_results": [
-        {
-          "chunk_id": "HR-207-basic-002",
-          "policy_id": "HR-207",
-          "section": "unknown",
-          "score": 0.5585260987281799
-        },
-        {
-          "chunk_id": "HR-206-basic-001",
-          "policy_id": "HR-206",
-          "section": "unknown",
-          "score": 0.5356804728507996
-        },
-        {
-          "chunk_id": "HR-205-basic-002",
-          "policy_id": "HR-205",
-          "section": "unknown",
-          "score": 0.5072055459022522
-        },
-        {
-          "chunk_id": "HR-206-basic-002",
-          "policy_id": "HR-206",
-          "section": "unknown",
-          "score": 0.4941539168357849
-        },
-        {
-          "chunk_id": "HR-203-basic-002",
-          "policy_id": "HR-203",
-          "section": "unknown",
-          "score": 0.4868825674057007
-        }
-      ],
-      "structured_results": [
-        {
-          "chunk_id": "HR-207-4.2-002",
-          "policy_id": "HR-207",
-          "section": "4.2",
-          "score": 0.5854418277740479
-        },
-        {
-          "chunk_id": "HR-202-4.2-002",
-          "policy_id": "HR-202",
-          "section": "4.2",
-          "score": 0.549687385559082
-        },
-        {
-          "chunk_id": "HR-205-4.2-002",
-          "policy_id": "HR-205",
-          "section": "4.2",
-          "score": 0.5475456118583679
-        },
-        {
-          "chunk_id": "HR-206-4.2-002",
-          "policy_id": "HR-206",
-          "section": "4.2",
-          "score": 0.5452939867973328
-        },
-        {
-          "chunk_id": "HR-204-4.2-002",
-          "policy_id": "HR-204",
-          "section": "4.2",
-          "score": 0.5407717823982239
-        }
-      ]
+    "basic_chunks_ingested": 0,
+    "structured_chunks_ingested": 0,
+    "collection_stats": {
+      "basic_collection_size": 18,
+      "structured_collection_size": 24
     }
-  ],
+  },
+  "retrieval_evaluation": {
+    "basic_score": "0/8",
+    "structured_score": "7/8",
+    "basic_hits": 0,
+    "structured_hits": 7,
+    "results_table": [
+      {
+        "question_id": "Q1",
+        "question": "What is the carry-over cap for a probationary employee under HR-207 section 4.2?",
+        "expected_policy_id": "HR-207",
+        "expected_section": "4.2",
+        "expected_region": "Kerala",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": true,
+        "structured_rank": 1,
+        "structured_score": 0.7277606725692749,
+        "basic_results": [
+          {
+            "chunk_id": "HR-207-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional",
+            "score": 0.7214453816413879,
+            "metadata": {
+              "source_file": "HR-207-Kerala.md",
+              "policy_id": "HR-207",
+              "region": "Kerala",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "basic",
+              "chunk_id": "HR-207-basic-002"
+            }
+          },
+          {
+            "chunk_id": "HR-206-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privile",
+            "score": 0.606589674949646,
+            "metadata": {
+              "source_file": "HR-206-Mumbai.md",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-206",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "region": "Mumbai",
+              "chunk_type": "basic",
+              "chunk_id": "HR-206-basic-002"
+            }
+          },
+          {
+            "chunk_id": "HR-203-basic-002",
+            "text": "e prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privi",
+            "score": 0.5983502268791199,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "basic",
+              "policy_id": "HR-203",
+              "source_file": "HR-203-Chennai.md",
+              "chunk_id": "HR-203-basic-002",
+              "region": "Chennai",
+              "effective_date": "2025-01-01"
+            }
+          },
+          {
+            "chunk_id": "HR-205-basic-002",
+            "text": "r TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privileg",
+            "score": 0.5943800806999207,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "chunk_type": "basic",
+              "source_file": "HR-205-Pune.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-205-basic-002",
+              "policy_id": "HR-205",
+              "region": "Pune"
+            }
+          },
+          {
+            "chunk_id": "HR-202-basic-002",
+            "text": "quire prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | P",
+            "score": 0.5451025366783142,
+            "metadata": {
+              "source_file": "HR-202-Bangalore.md",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-202",
+              "region": "Bangalore",
+              "chunk_id": "HR-202-basic-002"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-207-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.7277606725692749,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-207",
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-207-4.2-002",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "section": "4.2",
+              "chunk_type": "structured",
+              "source_file": "HR-207-Kerala.md",
+              "region": "Kerala"
+            }
+          },
+          {
+            "chunk_id": "HR-202-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.6561006903648376,
+            "metadata": {
+              "chunk_id": "HR-202-4.2-002",
+              "policy_id": "HR-202",
+              "source_file": "HR-202-Bangalore.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "effective_date": "2025-01-01",
+              "region": "Bangalore",
+              "section": "4.2",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "structured"
+            }
+          },
+          {
+            "chunk_id": "HR-203-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |",
+            "score": 0.6522974967956543,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "region": "Chennai",
+              "policy_id": "HR-203",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "structured",
+              "section": "4.2",
+              "chunk_id": "HR-203-4.2-002",
+              "source_file": "HR-203-Chennai.md"
+            }
+          },
+          {
+            "chunk_id": "HR-206-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |",
+            "score": 0.6512438058853149,
+            "metadata": {
+              "region": "Mumbai",
+              "policy_id": "HR-206",
+              "section": "4.2",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-206-Mumbai.md",
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-206-4.2-002",
+              "chunk_type": "structured",
+              "effective_date": "2025-01-01"
+            }
+          },
+          {
+            "chunk_id": "HR-204-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **7 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 7 days |\n| Employee with 3+ years experience and 1+ year continuous service | 7 days |",
+            "score": 0.6480444669723511,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-204-4.2-002",
+              "policy_id": "HR-204",
+              "section": "4.2",
+              "region": "Hyderabad",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "structured",
+              "source_file": "HR-204-Hyderabad.md"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "Q2",
+        "question": "What is the carry-over cap for a confirmed employee in Bangalore?",
+        "expected_policy_id": "HR-202",
+        "expected_section": "4.2",
+        "expected_region": "Bangalore",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": true,
+        "structured_rank": 2,
+        "structured_score": 0.5121661424636841,
+        "basic_results": [
+          {
+            "chunk_id": "HR-207-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional",
+            "score": 0.5277357697486877,
+            "metadata": {
+              "policy_id": "HR-207",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-207-Kerala.md",
+              "effective_date": "2025-01-01",
+              "region": "Kerala",
+              "chunk_id": "HR-207-basic-002",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "basic"
+            }
+          },
+          {
+            "chunk_id": "HR-202-basic-001",
+            "text": "# HR-202 \u2014 Bangalore Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Bangalore region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor",
+            "score": 0.5232682228088379,
+            "metadata": {
+              "policy_id": "HR-202",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-202-Bangalore.md",
+              "chunk_type": "basic",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-202-basic-001",
+              "region": "Bangalore"
+            }
+          },
+          {
+            "chunk_id": "HR-205-basic-002",
+            "text": "r TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privileg",
+            "score": 0.47607892751693726,
+            "metadata": {
+              "chunk_type": "basic",
+              "chunk_id": "HR-205-basic-002",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-205-Pune.md",
+              "region": "Pune",
+              "policy_id": "HR-205"
+            }
+          },
+          {
+            "chunk_id": "HR-206-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privile",
+            "score": 0.46711820363998413,
+            "metadata": {
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-206",
+              "chunk_id": "HR-206-basic-002",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum",
+              "region": "Mumbai",
+              "source_file": "HR-206-Mumbai.md"
+            }
+          },
+          {
+            "chunk_id": "HR-203-basic-002",
+            "text": "e prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privi",
+            "score": 0.4572986960411072,
+            "metadata": {
+              "policy_id": "HR-203",
+              "region": "Chennai",
+              "chunk_id": "HR-203-basic-002",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-203-Chennai.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "basic"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-207-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5405428409576416,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "structured",
+              "chunk_id": "HR-207-4.2-002",
+              "effective_date": "2025-01-01",
+              "region": "Kerala",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "section": "4.2",
+              "policy_id": "HR-207",
+              "source_file": "HR-207-Kerala.md"
+            }
+          },
+          {
+            "chunk_id": "HR-202-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5121661424636841,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-202-4.2-002",
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "section": "4.2",
+              "region": "Bangalore",
+              "chunk_type": "structured",
+              "policy_id": "HR-202",
+              "source_file": "HR-202-Bangalore.md"
+            }
+          },
+          {
+            "chunk_id": "HR-206-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |",
+            "score": 0.5098634362220764,
+            "metadata": {
+              "chunk_id": "HR-206-4.2-002",
+              "policy_id": "HR-206",
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "section": "4.2",
+              "region": "Mumbai",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "structured",
+              "source_file": "HR-206-Mumbai.md"
+            }
+          },
+          {
+            "chunk_id": "HR-205-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |",
+            "score": 0.509556233882904,
+            "metadata": {
+              "region": "Pune",
+              "chunk_type": "structured",
+              "section": "4.2",
+              "chunk_id": "HR-205-4.2-002",
+              "policy_id": "HR-205",
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-205-Pune.md",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-204-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **7 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 7 days |\n| Employee with 3+ years experience and 1+ year continuous service | 7 days |",
+            "score": 0.5036578178405762,
+            "metadata": {
+              "chunk_type": "structured",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-204",
+              "chunk_id": "HR-204-4.2-002",
+              "region": "Hyderabad",
+              "section": "4.2",
+              "source_file": "HR-204-Hyderabad.md"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "Q3",
+        "question": "What is the carry-over cap for a confirmed employee in Chennai?",
+        "expected_policy_id": "HR-203",
+        "expected_section": "4.2",
+        "expected_region": "Chennai",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": false,
+        "structured_rank": -1,
+        "structured_score": 0.0,
+        "basic_results": [
+          {
+            "chunk_id": "HR-203-basic-001",
+            "text": "# HR-203 \u2014 Chennai Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Chennai region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this",
+            "score": 0.5480124950408936,
+            "metadata": {
+              "region": "Chennai",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-203-Chennai.md",
+              "policy_id": "HR-203",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "basic",
+              "chunk_id": "HR-203-basic-001",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          },
+          {
+            "chunk_id": "HR-207-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional",
+            "score": 0.5406521558761597,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum",
+              "source_file": "HR-207-Kerala.md",
+              "policy_id": "HR-207",
+              "chunk_type": "basic",
+              "chunk_id": "HR-207-basic-002",
+              "effective_date": "2025-01-01",
+              "region": "Kerala"
+            }
+          },
+          {
+            "chunk_id": "HR-205-basic-002",
+            "text": "r TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privileg",
+            "score": 0.489798903465271,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-205-Pune.md",
+              "chunk_id": "HR-205-basic-002",
+              "policy_id": "HR-205",
+              "chunk_type": "basic",
+              "region": "Pune"
+            }
+          },
+          {
+            "chunk_id": "HR-203-basic-002",
+            "text": "e prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privi",
+            "score": 0.4822784662246704,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-203-basic-002",
+              "source_type": "synthetic_training_addendum",
+              "policy_id": "HR-203",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-203-Chennai.md",
+              "region": "Chennai",
+              "chunk_type": "basic"
+            }
+          },
+          {
+            "chunk_id": "HR-206-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privile",
+            "score": 0.4801654815673828,
+            "metadata": {
+              "region": "Mumbai",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-206-Mumbai.md",
+              "chunk_id": "HR-206-basic-002",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-206"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-207-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5551226139068604,
+            "metadata": {
+              "chunk_id": "HR-207-4.2-002",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-207",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "structured",
+              "section": "4.2",
+              "region": "Kerala",
+              "source_file": "HR-207-Kerala.md"
+            }
+          },
+          {
+            "chunk_id": "HR-202-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5270160436630249,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "region": "Bangalore",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-202",
+              "chunk_type": "structured",
+              "section": "4.2",
+              "chunk_id": "HR-202-4.2-002",
+              "source_file": "HR-202-Bangalore.md"
+            }
+          },
+          {
+            "chunk_id": "HR-205-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |",
+            "score": 0.5265293121337891,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-205",
+              "section": "4.2",
+              "chunk_id": "HR-205-4.2-002",
+              "source_type": "synthetic_training_addendum",
+              "source_file": "HR-205-Pune.md",
+              "effective_date": "2025-01-01",
+              "chunk_type": "structured",
+              "region": "Pune"
+            }
+          },
+          {
+            "chunk_id": "HR-206-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |",
+            "score": 0.5230796337127686,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-206-Mumbai.md",
+              "section": "4.2",
+              "chunk_id": "HR-206-4.2-002",
+              "region": "Mumbai",
+              "policy_id": "HR-206",
+              "chunk_type": "structured"
+            }
+          },
+          {
+            "chunk_id": "HR-204-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **7 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 7 days |\n| Employee with 3+ years experience and 1+ year continuous service | 7 days |",
+            "score": 0.5207242965698242,
+            "metadata": {
+              "region": "Hyderabad",
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-204-4.2-002",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-204-Hyderabad.md",
+              "section": "4.2",
+              "policy_id": "HR-204",
+              "chunk_type": "structured"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "Q4",
+        "question": "What is the carry-over cap for a confirmed employee in Hyderabad?",
+        "expected_policy_id": "HR-204",
+        "expected_section": "4.2",
+        "expected_region": "Hyderabad",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": true,
+        "structured_rank": 5,
+        "structured_score": 0.5289030075073242,
+        "basic_results": [
+          {
+            "chunk_id": "HR-207-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional",
+            "score": 0.5550006628036499,
+            "metadata": {
+              "policy_id": "HR-207",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-207-Kerala.md",
+              "chunk_type": "basic",
+              "chunk_id": "HR-207-basic-002",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum",
+              "region": "Kerala"
+            }
+          },
+          {
+            "chunk_id": "HR-204-basic-001",
+            "text": "# HR-204 \u2014 Hyderabad Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Hyderabad region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor",
+            "score": 0.5203495025634766,
+            "metadata": {
+              "chunk_id": "HR-204-basic-001",
+              "source_type": "synthetic_training_addendum",
+              "source_file": "HR-204-Hyderabad.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-204",
+              "region": "Hyderabad",
+              "effective_date": "2025-01-01",
+              "chunk_type": "basic"
+            }
+          },
+          {
+            "chunk_id": "HR-205-basic-002",
+            "text": "r TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privileg",
+            "score": 0.5191617012023926,
+            "metadata": {
+              "policy_id": "HR-205",
+              "effective_date": "2025-01-01",
+              "region": "Pune",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "basic",
+              "chunk_id": "HR-205-basic-002",
+              "source_file": "HR-205-Pune.md",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          },
+          {
+            "chunk_id": "HR-203-basic-002",
+            "text": "e prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privi",
+            "score": 0.500298798084259,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-203",
+              "region": "Chennai",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-203-basic-002",
+              "source_file": "HR-203-Chennai.md",
+              "chunk_type": "basic",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-206-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privile",
+            "score": 0.4994027018547058,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-206-basic-002",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "region": "Mumbai",
+              "policy_id": "HR-206",
+              "source_type": "synthetic_training_addendum",
+              "source_file": "HR-206-Mumbai.md"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-207-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5632014274597168,
+            "metadata": {
+              "chunk_id": "HR-207-4.2-002",
+              "source_type": "synthetic_training_addendum",
+              "source_file": "HR-207-Kerala.md",
+              "policy_id": "HR-207",
+              "section": "4.2",
+              "region": "Kerala",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "structured",
+              "effective_date": "2025-01-01"
+            }
+          },
+          {
+            "chunk_id": "HR-202-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5341416001319885,
+            "metadata": {
+              "policy_id": "HR-202",
+              "section": "4.2",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-202-Bangalore.md",
+              "region": "Bangalore",
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "structured",
+              "chunk_id": "HR-202-4.2-002"
+            }
+          },
+          {
+            "chunk_id": "HR-205-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |",
+            "score": 0.5327683091163635,
+            "metadata": {
+              "chunk_type": "structured",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-205-4.2-002",
+              "section": "4.2",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-205",
+              "source_file": "HR-205-Pune.md",
+              "region": "Pune"
+            }
+          },
+          {
+            "chunk_id": "HR-206-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |",
+            "score": 0.5302109718322754,
+            "metadata": {
+              "source_file": "HR-206-Mumbai.md",
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "structured",
+              "region": "Mumbai",
+              "source_type": "synthetic_training_addendum",
+              "policy_id": "HR-206",
+              "chunk_id": "HR-206-4.2-002",
+              "section": "4.2"
+            }
+          },
+          {
+            "chunk_id": "HR-204-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **7 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 7 days |\n| Employee with 3+ years experience and 1+ year continuous service | 7 days |",
+            "score": 0.5289030075073242,
+            "metadata": {
+              "policy_id": "HR-204",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "structured",
+              "source_type": "synthetic_training_addendum",
+              "section": "4.2",
+              "region": "Hyderabad",
+              "chunk_id": "HR-204-4.2-002",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-204-Hyderabad.md"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "Q5",
+        "question": "How many casual/sick leaves are listed for Bangalore in section 4.3?",
+        "expected_policy_id": "HR-202",
+        "expected_section": "4.3",
+        "expected_region": "Bangalore",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": true,
+        "structured_rank": 1,
+        "structured_score": 0.6005598306655884,
+        "basic_results": [
+          {
+            "chunk_id": "HR-202-basic-001",
+            "text": "# HR-202 \u2014 Bangalore Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Bangalore region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor",
+            "score": 0.5203213691711426,
+            "metadata": {
+              "chunk_id": "HR-202-basic-001",
+              "region": "Bangalore",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-202-Bangalore.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum",
+              "policy_id": "HR-202"
+            }
+          },
+          {
+            "chunk_id": "HR-202-basic-003",
+            "text": "1+ year continuous service | 9 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Bangalore | 15 | 3 |\n\n## 4.4 Leave Approval\n\nLeave must be approved by the TL/Manager before submission in the ERP.",
+            "score": 0.4740062952041626,
+            "metadata": {
+              "chunk_id": "HR-202-basic-003",
+              "region": "Bangalore",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "effective_date": "2025-01-01",
+              "chunk_type": "basic",
+              "policy_id": "HR-202",
+              "source_file": "HR-202-Bangalore.md"
+            }
+          },
+          {
+            "chunk_id": "HR-207-basic-001",
+            "text": "# HR-207 \u2014 Kerala Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Kerala region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this t",
+            "score": 0.40884852409362793,
+            "metadata": {
+              "policy_id": "HR-207",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "basic",
+              "region": "Kerala",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-207-Kerala.md",
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-207-basic-001"
+            }
+          },
+          {
+            "chunk_id": "HR-207-basic-003",
+            "text": "ays |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Kerala | 15 | 3 |\n\n## 4.4 Leave Approval\n\nLeave must be approved by the TL/Manager before submission in the ERP.",
+            "score": 0.4076194167137146,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "basic",
+              "source_file": "HR-207-Kerala.md",
+              "source_type": "synthetic_training_addendum",
+              "policy_id": "HR-207",
+              "region": "Kerala",
+              "chunk_id": "HR-207-basic-003"
+            }
+          },
+          {
+            "chunk_id": "HR-203-basic-001",
+            "text": "# HR-203 \u2014 Chennai Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Chennai region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this",
+            "score": 0.406528115272522,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "region": "Chennai",
+              "chunk_type": "basic",
+              "chunk_id": "HR-203-basic-001",
+              "policy_id": "HR-203",
+              "source_file": "HR-203-Chennai.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "effective_date": "2025-01-01"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-202-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Bangalore | 15 | 3 |",
+            "score": 0.6005598306655884,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "policy_id": "HR-202",
+              "section": "4.3",
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-202-4.3-003",
+              "region": "Bangalore",
+              "chunk_type": "structured",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-202-Bangalore.md"
+            }
+          },
+          {
+            "chunk_id": "HR-207-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Kerala | 15 | 3 |",
+            "score": 0.5118857622146606,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "region": "Kerala",
+              "chunk_id": "HR-207-4.3-003",
+              "source_type": "synthetic_training_addendum",
+              "section": "4.3",
+              "effective_date": "2025-01-01",
+              "chunk_type": "structured",
+              "policy_id": "HR-207",
+              "source_file": "HR-207-Kerala.md"
+            }
+          },
+          {
+            "chunk_id": "HR-203-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Chennai | 15 | 3 |",
+            "score": 0.5042004585266113,
+            "metadata": {
+              "region": "Chennai",
+              "policy_id": "HR-203",
+              "chunk_type": "structured",
+              "source_file": "HR-203-Chennai.md",
+              "chunk_id": "HR-203-4.3-003",
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "section": "4.3",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          },
+          {
+            "chunk_id": "HR-206-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Mumbai | 15 | 3 |",
+            "score": 0.49318188428878784,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "structured",
+              "policy_id": "HR-206",
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-206-4.3-003",
+              "region": "Mumbai",
+              "source_file": "HR-206-Mumbai.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "section": "4.3"
+            }
+          },
+          {
+            "chunk_id": "HR-205-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Pune | 15 | 3 |",
+            "score": 0.4801017642021179,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "chunk_type": "structured",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "section": "4.3",
+              "source_file": "HR-205-Pune.md",
+              "region": "Pune",
+              "policy_id": "HR-205",
+              "chunk_id": "HR-205-4.3-003"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "Q6",
+        "question": "How many privilege leaves are listed for Chennai in section 4.3?",
+        "expected_policy_id": "HR-203",
+        "expected_section": "4.3",
+        "expected_region": "Chennai",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": true,
+        "structured_rank": 1,
+        "structured_score": 0.6732000112533569,
+        "basic_results": [
+          {
+            "chunk_id": "HR-203-basic-001",
+            "text": "# HR-203 \u2014 Chennai Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Chennai region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this",
+            "score": 0.5814985632896423,
+            "metadata": {
+              "chunk_id": "HR-203-basic-001",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-203",
+              "region": "Chennai",
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "basic",
+              "source_file": "HR-203-Chennai.md"
+            }
+          },
+          {
+            "chunk_id": "HR-207-basic-003",
+            "text": "ays |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Kerala | 15 | 3 |\n\n## 4.4 Leave Approval\n\nLeave must be approved by the TL/Manager before submission in the ERP.",
+            "score": 0.47171199321746826,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-207",
+              "region": "Kerala",
+              "source_file": "HR-207-Kerala.md",
+              "chunk_type": "basic",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-207-basic-003",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-207-basic-001",
+            "text": "# HR-207 \u2014 Kerala Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Kerala region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this t",
+            "score": 0.4482640027999878,
+            "metadata": {
+              "policy_id": "HR-207",
+              "effective_date": "2025-01-01",
+              "chunk_type": "basic",
+              "chunk_id": "HR-207-basic-001",
+              "region": "Kerala",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_file": "HR-207-Kerala.md",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-202-basic-001",
+            "text": "# HR-202 \u2014 Bangalore Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Bangalore region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor",
+            "score": 0.43962740898132324,
+            "metadata": {
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-202-basic-001",
+              "source_type": "synthetic_training_addendum",
+              "region": "Bangalore",
+              "source_file": "HR-202-Bangalore.md",
+              "policy_id": "HR-202"
+            }
+          },
+          {
+            "chunk_id": "HR-204-basic-003",
+            "text": "1+ year continuous service | 7 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Hyderabad | 15 | 3 |\n\n## 4.4 Leave Approval\n\nLeave must be approved by the TL/Manager before submission in the ERP.",
+            "score": 0.42786896228790283,
+            "metadata": {
+              "chunk_type": "basic",
+              "source_type": "synthetic_training_addendum",
+              "region": "Hyderabad",
+              "source_file": "HR-204-Hyderabad.md",
+              "chunk_id": "HR-204-basic-003",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-204",
+              "effective_date": "2025-01-01"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-203-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Chennai | 15 | 3 |",
+            "score": 0.6732000112533569,
+            "metadata": {
+              "region": "Chennai",
+              "source_file": "HR-203-Chennai.md",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-203",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-203-4.3-003",
+              "chunk_type": "structured",
+              "section": "4.3"
+            }
+          },
+          {
+            "chunk_id": "HR-207-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Kerala | 15 | 3 |",
+            "score": 0.5695145130157471,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-207",
+              "section": "4.3",
+              "chunk_type": "structured",
+              "source_type": "synthetic_training_addendum",
+              "region": "Kerala",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-207-4.3-003",
+              "source_file": "HR-207-Kerala.md"
+            }
+          },
+          {
+            "chunk_id": "HR-202-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Bangalore | 15 | 3 |",
+            "score": 0.5621970891952515,
+            "metadata": {
+              "chunk_id": "HR-202-4.3-003",
+              "section": "4.3",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-202",
+              "effective_date": "2025-01-01",
+              "region": "Bangalore",
+              "source_file": "HR-202-Bangalore.md",
+              "chunk_type": "structured",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-203-4.1-001",
+            "text": "## 4.1 Annual Leave Eligibility\n\nEmployees in the Chennai region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.",
+            "score": 0.5620194673538208,
+            "metadata": {
+              "region": "Chennai",
+              "chunk_type": "structured",
+              "source_file": "HR-203-Chennai.md",
+              "policy_id": "HR-203",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "section": "4.1",
+              "chunk_id": "HR-203-4.1-001",
+              "effective_date": "2025-01-01"
+            }
+          },
+          {
+            "chunk_id": "HR-204-4.3-003",
+            "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Hyderabad | 15 | 3 |",
+            "score": 0.5499356389045715,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "region": "Hyderabad",
+              "chunk_type": "structured",
+              "policy_id": "HR-204",
+              "source_file": "HR-204-Hyderabad.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-204-4.3-003",
+              "section": "4.3",
+              "effective_date": "2025-01-01"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "Q7",
+        "question": "What is the carry-over cap for a confirmed employee in Pune?",
+        "expected_policy_id": "HR-205",
+        "expected_section": "4.2",
+        "expected_region": "Pune",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": true,
+        "structured_rank": 3,
+        "structured_score": 0.5367186665534973,
+        "basic_results": [
+          {
+            "chunk_id": "HR-207-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional",
+            "score": 0.5449148416519165,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-207-basic-002",
+              "region": "Kerala",
+              "source_file": "HR-207-Kerala.md",
+              "policy_id": "HR-207",
+              "effective_date": "2025-01-01",
+              "chunk_type": "basic",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          },
+          {
+            "chunk_id": "HR-205-basic-001",
+            "text": "# HR-205 \u2014 Pune Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Pune region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this train",
+            "score": 0.5363000631332397,
+            "metadata": {
+              "source_file": "HR-205-Pune.md",
+              "chunk_id": "HR-205-basic-001",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "region": "Pune",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-205",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-206-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privile",
+            "score": 0.48802149295806885,
+            "metadata": {
+              "policy_id": "HR-206",
+              "source_file": "HR-206-Mumbai.md",
+              "source_type": "synthetic_training_addendum",
+              "region": "Mumbai",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-206-basic-002"
+            }
+          },
+          {
+            "chunk_id": "HR-205-basic-002",
+            "text": "r TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privileg",
+            "score": 0.48787450790405273,
+            "metadata": {
+              "source_file": "HR-205-Pune.md",
+              "region": "Pune",
+              "policy_id": "HR-205",
+              "chunk_type": "basic",
+              "chunk_id": "HR-205-basic-002",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "effective_date": "2025-01-01"
+            }
+          },
+          {
+            "chunk_id": "HR-203-basic-002",
+            "text": "e prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privi",
+            "score": 0.4859302043914795,
+            "metadata": {
+              "region": "Chennai",
+              "source_file": "HR-203-Chennai.md",
+              "chunk_type": "basic",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-203-basic-002",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-203"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-207-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5644887089729309,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-207",
+              "region": "Kerala",
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-207-4.2-002",
+              "chunk_type": "structured",
+              "section": "4.2",
+              "source_file": "HR-207-Kerala.md"
+            }
+          },
+          {
+            "chunk_id": "HR-202-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5374507904052734,
+            "metadata": {
+              "source_file": "HR-202-Bangalore.md",
+              "section": "4.2",
+              "policy_id": "HR-202",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-202-4.2-002",
+              "chunk_type": "structured",
+              "region": "Bangalore",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01"
+            }
+          },
+          {
+            "chunk_id": "HR-205-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |",
+            "score": 0.5367186665534973,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "policy_id": "HR-205",
+              "source_file": "HR-205-Pune.md",
+              "section": "4.2",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "structured",
+              "chunk_id": "HR-205-4.2-002",
+              "region": "Pune",
+              "effective_date": "2025-01-01"
+            }
+          },
+          {
+            "chunk_id": "HR-206-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |",
+            "score": 0.5319231152534485,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "region": "Mumbai",
+              "chunk_id": "HR-206-4.2-002",
+              "section": "4.2",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "structured",
+              "source_file": "HR-206-Mumbai.md",
+              "policy_id": "HR-206",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          },
+          {
+            "chunk_id": "HR-204-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **7 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 7 days |\n| Employee with 3+ years experience and 1+ year continuous service | 7 days |",
+            "score": 0.52817702293396,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-204-4.2-002",
+              "section": "4.2",
+              "region": "Hyderabad",
+              "policy_id": "HR-204",
+              "chunk_type": "structured",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-204-Hyderabad.md",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "Q8",
+        "question": "What is the carry-over cap for a confirmed employee in Mumbai?",
+        "expected_policy_id": "HR-206",
+        "expected_section": "4.2",
+        "expected_region": "Mumbai",
+        "basic_hit": false,
+        "basic_rank": -1,
+        "basic_score": 0.0,
+        "structured_hit": true,
+        "structured_rank": 4,
+        "structured_score": 0.5452939867973328,
+        "basic_results": [
+          {
+            "chunk_id": "HR-207-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |\n\n## 4.3 Regional",
+            "score": 0.5585260987281799,
+            "metadata": {
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "chunk_id": "HR-207-basic-002",
+              "policy_id": "HR-207",
+              "region": "Kerala",
+              "source_file": "HR-207-Kerala.md",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-206-basic-001",
+            "text": "# HR-206 \u2014 Mumbai Regional Leave Addendum\n\n> **Training data notice:** This addendum is created for the Week 3 RAG exercise. It is not an official company policy. General rules are based on the supplied Employee Handbook; regional values below are synthetic test data.\n\n## 4.1 Annual Leave Eligibility\n\nEmployees in the Mumbai region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this t",
+            "score": 0.5356804728507996,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "region": "Mumbai",
+              "policy_id": "HR-206",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "source_type": "synthetic_training_addendum",
+              "source_file": "HR-206-Mumbai.md",
+              "chunk_id": "HR-206-basic-001"
+            }
+          },
+          {
+            "chunk_id": "HR-205-basic-002",
+            "text": "r TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privileg",
+            "score": 0.5072055459022522,
+            "metadata": {
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-205-basic-002",
+              "region": "Pune",
+              "chunk_type": "basic",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-205",
+              "source_file": "HR-205-Pune.md",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          },
+          {
+            "chunk_id": "HR-206-basic-002",
+            "text": "prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privile",
+            "score": 0.4941539168357849,
+            "metadata": {
+              "chunk_type": "basic",
+              "policy_id": "HR-206",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "effective_date": "2025-01-01",
+              "region": "Mumbai",
+              "chunk_id": "HR-206-basic-002",
+              "source_file": "HR-206-Mumbai.md"
+            }
+          },
+          {
+            "chunk_id": "HR-203-basic-002",
+            "text": "e prior TL/Manager approval and must be submitted through the ERP.\n\n## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |\n\n## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privi",
+            "score": 0.4868825674057007,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-203",
+              "region": "Chennai",
+              "chunk_id": "HR-203-basic-002",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "source_type": "synthetic_training_addendum",
+              "chunk_type": "basic",
+              "source_file": "HR-203-Chennai.md"
+            }
+          }
+        ],
+        "structured_results": [
+          {
+            "chunk_id": "HR-207-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.5854418277740479,
+            "metadata": {
+              "section": "4.2",
+              "source_file": "HR-207-Kerala.md",
+              "effective_date": "2025-01-01",
+              "region": "Kerala",
+              "source_type": "synthetic_training_addendum",
+              "chunk_id": "HR-207-4.2-002",
+              "policy_id": "HR-207",
+              "chunk_type": "structured",
+              "source_basis": "SS Employee Handbook Updated-2025"
+            }
+          },
+          {
+            "chunk_id": "HR-202-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+            "score": 0.549687385559082,
+            "metadata": {
+              "region": "Bangalore",
+              "source_type": "synthetic_training_addendum",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-202-4.2-002",
+              "source_file": "HR-202-Bangalore.md",
+              "chunk_type": "structured",
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-202",
+              "section": "4.2"
+            }
+          },
+          {
+            "chunk_id": "HR-205-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |",
+            "score": 0.5475456118583679,
+            "metadata": {
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_id": "HR-205-4.2-002",
+              "region": "Pune",
+              "source_type": "synthetic_training_addendum",
+              "source_file": "HR-205-Pune.md",
+              "chunk_type": "structured",
+              "effective_date": "2025-01-01",
+              "section": "4.2",
+              "policy_id": "HR-205"
+            }
+          },
+          {
+            "chunk_id": "HR-206-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |",
+            "score": 0.5452939867973328,
+            "metadata": {
+              "effective_date": "2025-01-01",
+              "policy_id": "HR-206",
+              "section": "4.2",
+              "source_file": "HR-206-Mumbai.md",
+              "region": "Mumbai",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "chunk_type": "structured",
+              "chunk_id": "HR-206-4.2-002",
+              "source_type": "synthetic_training_addendum"
+            }
+          },
+          {
+            "chunk_id": "HR-204-4.2-002",
+            "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **7 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 7 days |\n| Employee with 3+ years experience and 1+ year continuous service | 7 days |",
+            "score": 0.5407717823982239,
+            "metadata": {
+              "region": "Hyderabad",
+              "chunk_type": "structured",
+              "chunk_id": "HR-204-4.2-002",
+              "source_basis": "SS Employee Handbook Updated-2025",
+              "policy_id": "HR-204",
+              "section": "4.2",
+              "source_type": "synthetic_training_addendum",
+              "effective_date": "2025-01-01",
+              "source_file": "HR-204-Hyderabad.md"
+            }
+          }
+        ]
+      }
+    ]
+  },
   "metadata_filtering": {
     "query": "What is the carry-over cap for a probationary employee?",
     "region_filter": "Kerala",
-    "unfiltered": [
+    "unfiltered_results": [
       {
         "chunk_id": "HR-207-4.2-002",
-        "region": "Kerala",
-        "policy_id": "HR-207",
-        "score": 0.751366376876831
+        "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+        "score": 0.751366376876831,
+        "metadata": {
+          "chunk_type": "structured",
+          "region": "Kerala",
+          "chunk_id": "HR-207-4.2-002",
+          "source_type": "synthetic_training_addendum",
+          "effective_date": "2025-01-01",
+          "policy_id": "HR-207",
+          "section": "4.2",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "source_file": "HR-207-Kerala.md"
+        }
       },
       {
         "chunk_id": "HR-203-4.2-002",
-        "region": "Chennai",
-        "policy_id": "HR-203",
-        "score": 0.64497309923172
+        "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **8 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 8 days |\n| Employee with 3+ years experience and 1+ year continuous service | 8 days |",
+        "score": 0.64497309923172,
+        "metadata": {
+          "source_type": "synthetic_training_addendum",
+          "policy_id": "HR-203",
+          "source_file": "HR-203-Chennai.md",
+          "chunk_type": "structured",
+          "effective_date": "2025-01-01",
+          "region": "Chennai",
+          "chunk_id": "HR-203-4.2-002",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "section": "4.2"
+        }
       },
       {
         "chunk_id": "HR-205-4.2-002",
-        "region": "Pune",
-        "policy_id": "HR-205",
-        "score": 0.6440275311470032
+        "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **10 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 10 days |\n| Employee with 3+ years experience and 1+ year continuous service | 10 days |",
+        "score": 0.6440275311470032,
+        "metadata": {
+          "source_type": "synthetic_training_addendum",
+          "effective_date": "2025-01-01",
+          "region": "Pune",
+          "source_file": "HR-205-Pune.md",
+          "policy_id": "HR-205",
+          "chunk_type": "structured",
+          "chunk_id": "HR-205-4.2-002",
+          "section": "4.2",
+          "source_basis": "SS Employee Handbook Updated-2025"
+        }
       },
       {
         "chunk_id": "HR-204-4.2-002",
-        "region": "Hyderabad",
-        "policy_id": "HR-204",
-        "score": 0.6438145637512207
+        "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **7 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 7 days |\n| Employee with 3+ years experience and 1+ year continuous service | 7 days |",
+        "score": 0.6438145637512207,
+        "metadata": {
+          "effective_date": "2025-01-01",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "policy_id": "HR-204",
+          "chunk_id": "HR-204-4.2-002",
+          "source_file": "HR-204-Hyderabad.md",
+          "region": "Hyderabad",
+          "source_type": "synthetic_training_addendum",
+          "chunk_type": "structured",
+          "section": "4.2"
+        }
       },
       {
         "chunk_id": "HR-206-4.2-002",
-        "region": "Mumbai",
-        "policy_id": "HR-206",
-        "score": 0.6425521969795227
+        "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, eligible confirmed employees may carry forward up to **6 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 0 days |\n| Confirmed employee | 6 days |\n| Employee with 3+ years experience and 1+ year continuous service | 6 days |",
+        "score": 0.6425521969795227,
+        "metadata": {
+          "chunk_id": "HR-206-4.2-002",
+          "source_type": "synthetic_training_addendum",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "chunk_type": "structured",
+          "policy_id": "HR-206",
+          "effective_date": "2025-01-01",
+          "section": "4.2",
+          "source_file": "HR-206-Mumbai.md",
+          "region": "Mumbai"
+        }
       }
     ],
-    "filtered": [
+    "filtered_results": [
       {
         "chunk_id": "HR-207-4.2-002",
-        "region": "Kerala",
-        "policy_id": "HR-207",
-        "score": 0.751366376876831
+        "text": "## 4.2 Carry-over Rule\n\nFor this training addendum, a **probationary employee has a carry-over cap of 2 days**. A confirmed employee may carry forward up to **9 leave days** to the next calendar year.\n\n### Eligibility Table\n\n| Employee status | Carry-over cap |\n|---|---:|\n| Probationary employee | 2 days |\n| Confirmed employee | 9 days |\n| Employee with 3+ years experience and 1+ year continuous service | 9 days |",
+        "score": 0.751366376876831,
+        "metadata": {
+          "chunk_id": "HR-207-4.2-002",
+          "source_file": "HR-207-Kerala.md",
+          "chunk_type": "structured",
+          "section": "4.2",
+          "region": "Kerala",
+          "source_type": "synthetic_training_addendum",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "effective_date": "2025-01-01",
+          "policy_id": "HR-207"
+        }
       },
       {
         "chunk_id": "HR-207-4.3-003",
-        "region": "Kerala",
-        "policy_id": "HR-207",
-        "score": 0.2543764114379883
+        "text": "## 4.3 Regional Leave Table\n\n| Region | Casual/Sick Leave | Privilege Leave |\n|---|---:|---:|\n| Kerala | 15 | 3 |",
+        "score": 0.2543764114379883,
+        "metadata": {
+          "region": "Kerala",
+          "section": "4.3",
+          "policy_id": "HR-207",
+          "chunk_type": "structured",
+          "source_type": "synthetic_training_addendum",
+          "chunk_id": "HR-207-4.3-003",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "effective_date": "2025-01-01",
+          "source_file": "HR-207-Kerala.md"
+        }
       },
       {
         "chunk_id": "HR-207-4.1-001",
-        "region": "Kerala",
-        "policy_id": "HR-207",
-        "score": 0.24834758043289185
+        "text": "## 4.1 Annual Leave Eligibility\n\nEmployees in the Kerala region follow the company's annual leave process. Leave requests require prior TL/Manager approval and must be submitted through the ERP.",
+        "score": 0.24834758043289185,
+        "metadata": {
+          "effective_date": "2025-01-01",
+          "region": "Kerala",
+          "chunk_type": "structured",
+          "source_type": "synthetic_training_addendum",
+          "section": "4.1",
+          "chunk_id": "HR-207-4.1-001",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "policy_id": "HR-207",
+          "source_file": "HR-207-Kerala.md"
+        }
       },
       {
         "chunk_id": "HR-207-4.4-004",
-        "region": "Kerala",
-        "policy_id": "HR-207",
-        "score": 0.24104267358779907
+        "text": "## 4.4 Leave Approval\n\nLeave must be approved by the TL/Manager before submission in the ERP.",
+        "score": 0.24104267358779907,
+        "metadata": {
+          "source_file": "HR-207-Kerala.md",
+          "source_basis": "SS Employee Handbook Updated-2025",
+          "chunk_id": "HR-207-4.4-004",
+          "region": "Kerala",
+          "section": "4.4",
+          "effective_date": "2025-01-01",
+          "source_type": "synthetic_training_addendum",
+          "policy_id": "HR-207",
+          "chunk_type": "structured"
+        }
       }
-    ]
-  }
+    ],
+    "top_changed": false
+  },
+  "answerable_questions": [
+    {
+      "question_id": "A1",
+      "question": "What is the probationary employee carry-over cap under HR-207 section 4.2?",
+      "answer": "Error: Error code: 404 - {'error': {'message': 'The model `gpt-4-turbo-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+      "citations": [],
+      "retrieved_chunks_count": 5,
+      "success": false
+    },
+    {
+      "question_id": "A2",
+      "question": "What is the carry-over cap for a confirmed employee in Pune?",
+      "answer": "Error: Error code: 404 - {'error': {'message': 'The model `gpt-4-turbo-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+      "citations": [],
+      "retrieved_chunks_count": 5,
+      "success": false
+    },
+    {
+      "question_id": "A3",
+      "question": "How many privilege leaves are listed for Chennai?",
+      "answer": "Error: Error code: 404 - {'error': {'message': 'The model `gpt-4-turbo-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+      "citations": [],
+      "retrieved_chunks_count": 5,
+      "success": false
+    }
+  ],
+  "unanswerable_questions": [
+    {
+      "question_id": "U1",
+      "question": "What is the company's sabbatical leave policy?",
+      "expected_refusal_reason": "No sabbatical leave policy is mentioned in any of the HR addenda",
+      "refused": false,
+      "answer": "Error: Error code: 404 - {'error': {'message': 'The model `gpt-4-turbo-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+      "citations": [],
+      "retrieved_chunks_count": 5,
+      "success": false
+    },
+    {
+      "question_id": "U2",
+      "question": "What is the company's relocation allowance?",
+      "expected_refusal_reason": "No relocation allowance information is present in the policy documents",
+      "refused": false,
+      "answer": "Error: Error code: 404 - {'error': {'message': 'The model `gpt-4-turbo-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+      "citations": [],
+      "retrieved_chunks_count": 5,
+      "success": false
+    },
+    {
+      "question_id": "U3",
+      "question": "What is HR-999's carry-over policy?",
+      "expected_refusal_reason": "HR-999 does not exist; only HR-202 through HR-207 are in the policies",
+      "refused": false,
+      "answer": "Error: Error code: 404 - {'error': {'message': 'The model `gpt-4-turbo-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+      "citations": [],
+      "retrieved_chunks_count": 5,
+      "success": false
+    }
+  ]
 }
