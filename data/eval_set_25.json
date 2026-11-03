@@ -1,0 +1,227 @@
+[
+  {
+    "case_id": "eval-01",
+    "regression_trace_id": "tr-20261026-0184",
+    "is_regression": true,
+    "taxonomy_mode": "Cross-regional policy leakage",
+    "query": "I am an APAC employee based in Singapore ([REDACTED_EMP_ID]). How many paid sick days do I get per calendar year?",
+    "retrieved_context": "[HR-204-chunk-0015] (HR-204 §1, AMER): Eligible employees receive up to 10 paid sick-leave days per calendar year.\n[HR-201-chunk-0001] (HR-201 §1, APAC): Annual Leave Entitlement table.\n[HR-207-chunk-0025] (HR-207 §1, APAC): Probation Period: New regular employees normally complete a 6-month probation period.",
+    "response": "Under policy HR-204 §1, eligible employees receive up to 10 paid sick-leave days per calendar year. [HR-204-chunk-0015]"
+  },
+  {
+    "case_id": "eval-02",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cross-regional policy leakage",
+    "query": "As an EMEA employee ([REDACTED_EMP_ID]), can I work remotely 2 days each week?",
+    "retrieved_context": "[HR-202-chunk-0006] (HR-202 §2, APAC): Eligible employees may work remotely for up to 2 days per week unless a business unit has an approved exception.\n[HR-202-chunk-0009] (HR-202 §5, APAC): This addendum applies to APAC employees.",
+    "response": "Eligible employees may work remotely for up to 2 days per week under policy HR-202 §2. [HR-202-chunk-0006]"
+  },
+  {
+    "case_id": "eval-03",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cross-regional policy leakage",
+    "query": "What is the daily meal allowance for an EMEA employee on business travel? Asked by [REDACTED_NAME].",
+    "retrieved_context": "[HR-205-chunk-0021] (HR-205 §2, APAC): The standard meal allowance is USD 45 per eligible travel day.\n[HR-205-chunk-0024] (HR-205 §5, APAC): This addendum applies to APAC employees.",
+    "response": "The standard meal allowance is USD 45 per eligible travel day according to HR-205 §2. [HR-205-chunk-0021]"
+  },
+  {
+    "case_id": "eval-04",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cross-regional policy leakage",
+    "query": "How many weeks of parental leave does a primary parent in APAC get? ([REDACTED_EMP_ID])",
+    "retrieved_context": "[HR-203-chunk-0010] (HR-203 §1, EMEA): An eligible primary parent may receive up to 16 weeks of parental leave.\n[HR-203-chunk-0014] (HR-203 §5, EMEA): This addendum applies to EMEA employees.",
+    "response": "An eligible primary parent may receive up to 16 weeks of parental leave under HR-203 §1. [HR-203-chunk-0010]"
+  },
+  {
+    "case_id": "eval-05",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cross-regional policy leakage",
+    "query": "I am an APAC employee traveling on company business. What is my standard daily meal allowance?",
+    "retrieved_context": "[HR-205-chunk-0021] (HR-205 §2, APAC): The standard meal allowance is USD 45 per eligible travel day.\n[HR-205-chunk-0024] (HR-205 §5, APAC): This addendum applies to APAC employees.",
+    "response": "For APAC employees traveling on approved company business, the standard daily meal allowance is USD 45 per eligible travel day under HR-205 §2. [HR-205-chunk-0021]"
+  },
+  {
+    "case_id": "eval-06",
+    "regression_trace_id": "tr-20261027-0295",
+    "is_regression": true,
+    "taxonomy_mode": "Confuses probation tenure tiers in eligibility tables",
+    "query": "Can an employee with 2.5 months of probation service carry forward any leave? ([REDACTED_NAME])",
+    "retrieved_context": "[HR-207-chunk-0026] (HR-207 §2, APAC): Carry-Over Eligibility During Probation. Table: Probationary employee | Less than 3 months | 0 days; Probationary employee | 3 to less than 6 months | 2 days; Regular employee | 6 months or more | 5 days.",
+    "response": "Yes, under HR-207 §2, probationary employees receive a 2-day carry-over allowance into next calendar year. [HR-207-chunk-0026]"
+  },
+  {
+    "case_id": "eval-07",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Confuses probation tenure tiers in eligibility tables",
+    "query": "I am a probationary employee with 2 months of service ([REDACTED_EMP_ID]). What is my carry-over cap?",
+    "retrieved_context": "[HR-207-chunk-0026] (HR-207 §2, APAC): Table: Probationary employee | Less than 3 months | 0 days; Probationary employee | 3 to less than 6 months | 2 days; Regular employee | 6 months or more | 5 days.",
+    "response": "Under HR-207 §2, a probationary employee with 2 months of service has an annual-leave carry-over cap of 2 days. [HR-207-chunk-0026]"
+  },
+  {
+    "case_id": "eval-08",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Confuses probation tenure tiers in eligibility tables",
+    "query": "If a new hire has been here for 4 months on probation, what is their carry-over cap? ([REDACTED_EMP_ID])",
+    "retrieved_context": "[HR-207-chunk-0026] (HR-207 §2, APAC): Table: Probationary employee | Less than 3 months | 0 days; Probationary employee | 3 to less than 6 months | 2 days; Regular employee | 6 months or more | 5 days.",
+    "response": "Under HR-207 §2, probationary employees with 4 months of service have a carry-over cap of 5 days. [HR-207-chunk-0026]"
+  },
+  {
+    "case_id": "eval-09",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Confuses probation tenure tiers in eligibility tables",
+    "query": "What is the carry-over cap for an APAC probationary employee with 4 months of service? ([REDACTED_EMP_ID])",
+    "retrieved_context": "[HR-207-chunk-0026] (HR-207 §2, APAC): Table: Probationary employee | Less than 3 months | 0 days; Probationary employee | 3 to less than 6 months | 2 days; Regular employee | 6 months or more | 5 days.",
+    "response": "Under HR-207 §2, a probationary employee with 3 to less than 6 months of completed service has an annual leave carry-over cap of 2 days. [HR-207-chunk-0026]"
+  },
+  {
+    "case_id": "eval-10",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Confuses probation tenure tiers in eligibility tables",
+    "query": "What is the annual leave carry-over cap for an employee who has been on probation for only 1 month?",
+    "retrieved_context": "[HR-207-chunk-0026] (HR-207 §2, APAC): Table: Probationary employee | Less than 3 months | 0 days; Probationary employee | 3 to less than 6 months | 2 days; Regular employee | 6 months or more | 5 days.",
+    "response": "According to HR-207 §2, probationary employees with less than 3 months of completed service have a carry-over cap of 0 days. [HR-207-chunk-0026]"
+  },
+  {
+    "case_id": "eval-11",
+    "regression_trace_id": "tr-20261027-0334",
+    "is_regression": true,
+    "taxonomy_mode": "Hallucinates unindexed employee benefit policies",
+    "query": "Does the company offer a sabbatical policy after 5 years of service? Inquired by [REDACTED_NAME].",
+    "retrieved_context": "[HR-201-chunk-0001] (HR-201 §1, APAC): Annual Leave Entitlement table.\n[HR-207-chunk-0025] (HR-207 §1, APAC): Probation Period: New regular employees normally complete a 6-month probation period.",
+    "response": "Yes, regular employees with 5 or more years of service may apply for up to 3 months of unpaid sabbatical leave with executive approval. [HR-201-chunk-0001]"
+  },
+  {
+    "case_id": "eval-12",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Hallucinates unindexed employee benefit policies",
+    "query": "Can I claim pet bereavement leave if my dog passes away? ([REDACTED_NAME])",
+    "retrieved_context": "[HR-204-chunk-0015] (HR-204 §1, AMER): Eligible employees receive up to 10 paid sick-leave days per calendar year.\n[HR-204-chunk-0016] (HR-204 §2, AMER): Medical documentation may be requested for absences > 3 consecutive days.",
+    "response": "Employees may use up to 2 days of personal emergency sick leave for pet bereavement. [HR-204-chunk-0015]"
+  },
+  {
+    "case_id": "eval-13",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Hallucinates unindexed employee benefit policies",
+    "query": "What is the paid bereavement leave entitlement for employees in the handbook? ([REDACTED_EMP_ID])",
+    "retrieved_context": "[HR-201-chunk-0001] (HR-201 §1, APAC): Annual Leave Entitlement based on completed years of service.",
+    "response": "Eligible employees receive up to 3 consecutive working days of paid bereavement leave for immediate family members. [HR-201-chunk-0001]"
+  },
+  {
+    "case_id": "eval-14",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Hallucinates unindexed employee benefit policies",
+    "query": "Does the employee handbook include a corporate gym membership subsidy or wellness reimbursement?",
+    "retrieved_context": "[HR-201-chunk-0001] (HR-201 §1, APAC): Annual Leave Entitlement.\n[HR-205-chunk-0021] (HR-205 §2, APAC): Daily Meal Allowance.",
+    "response": "I cannot answer this from the provided policy corpus. The indexed addenda do not define this policy."
+  },
+  {
+    "case_id": "eval-15",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Hallucinates unindexed employee benefit policies",
+    "query": "What is the policy for extended unpaid sabbatical leave?",
+    "retrieved_context": "[HR-201-chunk-0001] (HR-201 §1, APAC): Annual Leave Entitlement.\n[HR-201-chunk-0004] (HR-201 §4, APAC): Scope.",
+    "response": "I cannot answer this from the provided policy corpus. The indexed addenda do not define this policy."
+  },
+  {
+    "case_id": "eval-16",
+    "regression_trace_id": "tr-20261027-0235",
+    "is_regression": true,
+    "taxonomy_mode": "Cites superseded baseline leave policy terms",
+    "query": "What is the carry-over policy for unused annual leave days? ([REDACTED_EMP_ID])",
+    "retrieved_context": "[HR-BASE-chunk-0012] (HR-BASE-2023 §4.1): Under base handbook 2023, employees may carry forward up to 10 unused leave days into the next year, expiring on December 31.\n[HR-201-chunk-0002] (HR-201 §2, 2026): Employees may carry over up to 5 unused annual-leave days into the following calendar year. Carry-over must be used by March 31.",
+    "response": "Under company policy HR-BASE-2023 §4.1, employees may carry forward up to 10 unused leave days into the next year, expiring on December 31. [HR-BASE-chunk-0012]"
+  },
+  {
+    "case_id": "eval-17",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cites superseded baseline leave policy terms",
+    "query": "Until when can I use my carried over leave days? ([REDACTED_NAME])",
+    "retrieved_context": "[HR-BASE-chunk-0012] (HR-BASE-2023 §4.1): Carried forward leave must be used before December 31 of the following year.\n[HR-201-chunk-0002] (HR-201 §2, 2026): Carry-over must be used by March 31.",
+    "response": "According to section 4.1 of the general handbook, carried forward leave must be used before December 31 of the following year. [HR-BASE-chunk-0012]"
+  },
+  {
+    "case_id": "eval-18",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cites superseded baseline leave policy terms",
+    "query": "Is there a cap on how many days carry over into 2027? ([REDACTED_EMP_ID])",
+    "retrieved_context": "[HR-BASE-chunk-0012] (HR-BASE-2023 §4.1): Annual leave carry-over cap is 10 days.\n[HR-201-chunk-0002] (HR-201 §2, 2026): Up to 5 unused annual-leave days.",
+    "response": "The annual leave carry-over cap is 10 days for confirmed employees under the base leave scheme. [HR-BASE-chunk-0012]"
+  },
+  {
+    "case_id": "eval-19",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cites superseded baseline leave policy terms",
+    "query": "Under the current 2026 policy, how many unused annual leave days can I carry over and by when must they be used?",
+    "retrieved_context": "[HR-201-chunk-0002] (HR-201 §2, APAC): Employees may carry over up to 5 unused annual-leave days into the following calendar year. Carry-over must be used by March 31.",
+    "response": "Under HR-201 §2, employees may carry over up to 5 unused annual-leave days into the following calendar year, and they must be used by March 31. [HR-201-chunk-0002]"
+  },
+  {
+    "case_id": "eval-20",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Cites superseded baseline leave policy terms",
+    "query": "What is the expiration deadline for carried over annual leave in the active handbook?",
+    "retrieved_context": "[HR-201-chunk-0002] (HR-201 §2, APAC): Carry-over must be used by March 31.",
+    "response": "Under HR-201 §2, carried-over annual leave must be used by March 31 of the following calendar year. [HR-201-chunk-0002]"
+  },
+  {
+    "case_id": "eval-21",
+    "regression_trace_id": "tr-20261028-0521",
+    "is_regression": true,
+    "taxonomy_mode": "Omits mandatory approval prerequisites or deadlines",
+    "query": "How many days of annual leave can I carry over to next year? ([REDACTED_NAME])",
+    "retrieved_context": "[HR-201-chunk-0002] (HR-201 §2, APAC): Employees may carry over up to 5 unused annual-leave days into the following calendar year. Carry-over must be used by March 31.",
+    "response": "You may carry over up to 5 unused annual-leave days into the following calendar year. [HR-201-chunk-0002]"
+  },
+  {
+    "case_id": "eval-22",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Omits mandatory approval prerequisites or deadlines",
+    "query": "Can I work from home on Thursdays and Fridays? ([REDACTED_EMP_ID])",
+    "retrieved_context": "[HR-202-chunk-0005] (HR-202 §1, APAC): Eligibility: Employees may request remote work after completing probation.\n[HR-202-chunk-0006] (HR-202 §2, APAC): Weekly Limit: Up to 2 days per week.\n[HR-202-chunk-0007] (HR-202 §3, APAC): Remote-work schedules require manager approval.",
+    "response": "Yes, you are entitled to work remotely for up to 2 days per week. [HR-202-chunk-0006]"
+  },
+  {
+    "case_id": "eval-23",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Omits mandatory approval prerequisites or deadlines",
+    "query": "I want to take 2 weeks of annual leave next month. What do I do? ([REDACTED_NAME])",
+    "retrieved_context": "[HR-201-chunk-0001] (HR-201 §1, APAC): Annual Leave Entitlement table.\n[HR-201-chunk-0003] (HR-201 §3, APAC): Annual leave requests should normally be submitted at least 5 working days before the planned leave date. Manager approval is required.",
+    "response": "You receive between 12 and 18 days of annual leave depending on your years of service. [HR-201-chunk-0001]"
+  },
+  {
+    "case_id": "eval-24",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Omits mandatory approval prerequisites or deadlines",
+    "query": "What is the procedure and notice required for taking annual leave?",
+    "retrieved_context": "[HR-201-chunk-0003] (HR-201 §3, APAC): Annual leave requests should normally be submitted at least 5 working days before the planned leave date. Manager approval is required.",
+    "response": "Under HR-201 §3, annual leave requests should normally be submitted at least 5 working days before the planned leave date, and manager approval is required. [HR-201-chunk-0003]"
+  },
+  {
+    "case_id": "eval-25",
+    "regression_trace_id": null,
+    "is_regression": false,
+    "taxonomy_mode": "Omits mandatory approval prerequisites or deadlines",
+    "query": "What are the requirements for an APAC employee to work remotely up to 2 days per week?",
+    "retrieved_context": "[HR-202-chunk-0005] (HR-202 §1, APAC): Completed probation required.\n[HR-202-chunk-0006] (HR-202 §2, APAC): Weekly limit 2 days.\n[HR-202-chunk-0007] (HR-202 §3, APAC): Remote-work schedules require manager approval.",
+    "response": "Under HR-202 §1–§3, eligible APAC employees may work remotely up to 2 days per week provided they have completed probation and obtained manager approval. [HR-202-chunk-0006]"
+  }
+]
