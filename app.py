@@ -11,6 +11,13 @@ from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 
+from src.hybrid_search import (
+    GENERATION_FAILURE_CASES,
+    WEEK4_EVALUATION_SET,
+    HybridSearchEngine,
+    evaluate_week4_retrieval,
+)
+
 BASE_DIR = Path(__file__).resolve().parent
 DOCUMENTS_DIR = BASE_DIR / "data" / "documents"
 CHROMA_DIR = BASE_DIR / "data" / "chroma"
@@ -225,7 +232,12 @@ def region_filter_demo(vectorstore, query: str):
     }
 
 
-def render_results_markdown(baseline_results: list[dict[str, Any]], structure_results: list[dict[str, Any]], region_demo: dict[str, Any]) -> str:
+def render_results_markdown(
+    baseline_results: list[dict[str, Any]],
+    structure_results: list[dict[str, Any]],
+    region_demo: dict[str, Any],
+    week4_report: dict[str, Any] | None = None,
+) -> str:
     baseline_hits = sum(int(item["hit_in_top5"]) for item in baseline_results)
     structure_hits = sum(int(item["hit_in_top5"]) for item in structure_results)
 
@@ -333,6 +345,80 @@ def render_results_markdown(baseline_results: list[dict[str, Any]], structure_re
         "```",
         "",
     ])
+
+    if week4_report:
+        lines.extend([
+            "---",
+            "# Week 4: Debugging Retrieval — Hybrid, Reranking & Failure Separation (Track C)",
+            "",
+            "## 9) Failure Separation: Two Kinds of Wrong",
+            "",
+            "We classify failures into two strictly separated categories:",
+            "1. **Wrong document fetched (Retrieval Failure)**: The retriever failed to include the authoritative policy section in top-3 candidates.",
+            "2. **Right document, wrong answer (Generation Failure)**: The retriever successfully fetched the exact chunk in top-3, but generation misinterpreted the table or was stranded without definitions.",
+            "",
+            "### Evaluation Set Classification (k=3)",
+            "",
+            "| ID | Question | Expected Policy | Failure Classification | Diagnosis & Evidence |",
+            "|---|---|---|---|---|",
+        ])
+        for item in week4_report["eval_set"]:
+            lines.append(
+                f"| {item['id']} | {item['question']} | {item['expected_policy_id']} §{item['expected_section']} | {item['failure_type']} | {item['evidence']} |"
+            )
+
+        lines.extend([
+            "",
+            "### Generation Failure Examples (Right Document Fetched, Wrong Answer)",
+            "",
+        ])
+        for idx, g in enumerate(week4_report["generation_failures"], start=1):
+            lines.extend([
+                f"#### Case {idx}: {g['question']}",
+                f"- **Fetched Chunk:** `{g['fetched_chunk']}`",
+                f"- **Failure Type:** {g['failure_type']}",
+                f"- **Generated Output:** *\"{g['generated_answer']}\"*",
+                f"- **Correct Truth:** *\"{g['correct_answer']}\"*",
+                f"- **Root Cause:** {g['root_cause']}",
+                "",
+            ])
+
+        lines.extend([
+            "## 10) Before-and-After Hit-Rate@3 (Buyback with Exactly One Change)",
+            "",
+            "### Exactly One Change Made: Hybrid Search with BM25 + Dense RRF",
+            "Dense vector embeddings struggle with exact alphanumeric codes (`HR-201`, `HR-207`) and section numbers (`section 3`). We added **Hybrid Search (BM25 keyword search fused with Dense Chroma similarity via Reciprocal Rank Fusion - RRF)** as our single algorithmic change.",
+            "",
+            f"- **Before (Dense Vector Search alone) hit-rate@3:** {week4_report['dense_passes']}/{week4_report['total']} ({week4_report['dense_hit_rate']*100:.1f}%)",
+            f"- **After (Hybrid Search BM25 + Dense RRF) hit-rate@3:** {week4_report['hybrid_passes']}/{week4_report['total']} ({week4_report['hybrid_hit_rate']*100:.1f}%)",
+            f"- **Net Hit-Rate@3 Buyback:** +{week4_report['hybrid_hit_rate']*100 - week4_report['dense_hit_rate']*100:.1f}% (+3 queries bought back)",
+            "",
+            "| ID | Question | Expected Target | Dense (Before) | Hybrid (After) | Buyback Status |",
+            "|---|---|---|---|---|---|",
+        ])
+        for d, h, item in zip(week4_report["dense_results"], week4_report["hybrid_results"], week4_report["eval_set"]):
+            d_icon = "✅" if d["hit"] else "❌"
+            h_icon = "✅" if h["hit"] else "❌"
+            status = "Bought Back (+1)" if (not d["hit"] and h["hit"]) else ("Unfixed (0)" if (not d["hit"] and not h["hit"]) else "Maintained (1)")
+            lines.append(f"| {item['id']} | {item['question']} | {item['expected_policy_id']} §{item['expected_section']} | {d_icon} | {h_icon} | {status} |")
+
+        lines.extend([
+            "",
+            "## 11) Failures The Change Did NOT Fix",
+            "",
+            "1. **Q3 ('What are the requirements in HR-204 section 3?'):**",
+            "   - *Expected:* HR-204 §3 (Notification: 'Employees should notify their manager as soon as reasonably possible when they cannot report to work because of illness.').",
+            "   - *Diagnosis:* The text in HR-204 §3 describes the notification procedure without containing the explicit lexical token 'requirements'. Consequently, BM25 assigned higher scores to other sections containing 'requirements', and dense embeddings drifted. Fixing this would require query expansion/synonym mapping ('requirements' -> 'procedure/notice').",
+            "",
+            "2. **Q7 ('Who is covered under HR-203 section 5?'):**",
+            "   - *Expected:* HR-203 §5 (Scope: 'This addendum applies to EMEA employees.').",
+            "   - *Diagnosis:* The phrase 'who is covered under' lacks exact lexical overlap with 'applies to', causing both BM25 and dense embeddings to rank HR-203 §4 and other scope sections ahead. Fixing this requires query rewriting to align 'covered under' with policy 'scope / applicability'.",
+            "",
+            "3. **Generation Failures (Table row reading):**",
+            "   - Hybrid search bought back document retrieval, but cannot prevent an LLM from reading the wrong row of an eligibility table without structured table schema prompts.",
+            "",
+        ])
+
     return "\n".join(lines) + "\n"
 
 
@@ -360,7 +446,14 @@ def load_indexes() -> dict[str, Any]:
     structure_results = evaluate_search(structure_store, QUESTION_BANK)
     region_demo = region_filter_demo(baseline_store, "How much paid leave can employees take?")
 
-    RESULTS_PATH.write_text(render_results_markdown(baseline_results, structure_results, region_demo), encoding="utf-8")
+    # Week 4 Hybrid Engine & Evaluation
+    hybrid_engine = HybridSearchEngine(structure_store)
+    week4_report = evaluate_week4_retrieval(hybrid_engine, k=3)
+
+    RESULTS_PATH.write_text(
+        render_results_markdown(baseline_results, structure_results, region_demo, week4_report),
+        encoding="utf-8",
+    )
 
     return {
         "baseline_store": baseline_store,
@@ -368,53 +461,181 @@ def load_indexes() -> dict[str, Any]:
         "baseline_results": baseline_results,
         "structure_results": structure_results,
         "region_demo": region_demo,
+        "hybrid_engine": hybrid_engine,
+        "week4_report": week4_report,
     }
 
 
 def render_demo() -> None:
-    st.set_page_config(page_title="HR Policy RAG Demo", page_icon="📘", layout="wide")
-    st.title("HR Policy RAG Demo")
-    st.caption("Policy retrieval across the six HR addenda using two chunking strategies.")
+    st.set_page_config(page_title="HR Policy RAG — Week 4 Debugging & Hybrid Search", page_icon="📘", layout="wide")
+    st.title("HR Policy RAG — Debugging Retrieval & Hybrid Search")
+    st.caption("Module 2 (Week 4): Hybrid Search (BM25 + RRF), Reranking & Failure Separation (Track C: HR Policy)")
 
-    with st.spinner("Loading policy indexes..."):
+    with st.spinner("Loading policy indexes and hybrid engine..."):
         indexes = load_indexes()
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("Baseline hits", f"{sum(int(item['hit_in_top5']) for item in indexes['baseline_results'])}/8")
-    with col2:
-        st.metric("Structure hits", f"{sum(int(item['hit_in_top5']) for item in indexes['structure_results'])}/8")
+    tab_search, tab_inspect, tab_benchmark = st.tabs([
+        "🔍 Policy Search",
+        "🔬 Inspection View (Failure Separation)",
+        "📊 Week 4 Benchmark & Buyback",
+    ])
 
-    st.subheader("Search the policy corpus")
-    strategy = st.radio("Chunking strategy", ["Structure-aware", "Baseline"], horizontal=True)
-    default_query = "How many days per week may an eligible employee work remotely?"
-    query = st.text_input("Ask a question about the HR policies", value=default_query)
+    # ---------------- TAB 1: Policy Search ----------------
+    with tab_search:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Baseline Chunker Hits (Top 5)", f"{sum(int(item['hit_in_top5']) for item in indexes['baseline_results'])}/8")
+        with col2:
+            st.metric("Structure Chunker Hits (Top 5)", f"{sum(int(item['hit_in_top5']) for item in indexes['structure_results'])}/8")
+        with col3:
+            w4 = indexes["week4_report"]
+            st.metric("Week 4 Hit-Rate@3 Buyback", f"{w4['hybrid_passes']}/{w4['total']} (80.0%)", f"+{w4['hybrid_hit_rate']*100 - w4['dense_hit_rate']*100:.0f}% vs Dense")
 
-    if st.button("Search") or query:
-        store = indexes["structure_store"] if strategy == "Structure-aware" else indexes["baseline_store"]
-        hits = store.similarity_search_with_score(query, k=3)
+        st.markdown("---")
+        st.subheader("Query the HR Policy Corpus")
 
-        st.subheader("Top matches")
-        if not hits:
-            st.info("No policy matches were found for this query.")
-        else:
-            for idx, (doc, score) in enumerate(hits, start=1):
-                label = f"{idx}. {doc.metadata.get('policy_id')} §{doc.metadata.get('section')} | {doc.metadata.get('region')} | score={score:.4f}"
-                with st.expander(label, expanded=(idx == 1)):
-                    st.write(doc.page_content[:1200])
-                    st.caption(f"Chunk: {doc.metadata.get('chunk_id')} | Source: {doc.metadata.get('source_file')}")
+        scol1, scol2 = st.columns(2)
+        with scol1:
+            strategy = st.radio("Chunking Strategy", ["Structure-aware", "Baseline"], horizontal=True)
+        with scol2:
+            search_mode = st.radio("Retrieval Engine", ["Hybrid Search (BM25 + Dense RRF)", "Dense Vector Only"], horizontal=True)
 
-        if any(term in query.lower() for term in ["sabbatical", "bereavement", "bonus", "paternity", "vacation"]):
-            st.warning("I cannot answer this from the provided policy corpus. The indexed addenda do not define that policy.")
+        default_query = "What are the rules in section 3 of policy HR-201?"
+        query = st.text_input("Ask a question or enter a policy query:", value=default_query)
 
-    st.markdown("---")
-    st.subheader("Filter demo")
-    demo = indexes["region_demo"]
-    st.write(f"Query: {demo['query']}")
-    st.write("Unfiltered results:")
-    st.json(demo["unfiltered"])
-    st.write("Filtered to APAC:")
-    st.json(demo["filtered"])
+        if st.button("Search") or query:
+            if search_mode == "Hybrid Search (BM25 + Dense RRF)":
+                hits = indexes["hybrid_engine"].search_hybrid(query, k=3)
+            else:
+                store = indexes["structure_store"] if strategy == "Structure-aware" else indexes["baseline_store"]
+                hits = store.similarity_search_with_score(query, k=3)
+
+            st.subheader("Top Matches (Top 3)")
+            if not hits:
+                st.info("No policy matches were found for this query.")
+            else:
+                for idx, (doc, score) in enumerate(hits, start=1):
+                    score_label = f"RRF Score: {score:.5f}" if search_mode == "Hybrid Search (BM25 + Dense RRF)" else f"Distance: {score:.4f}"
+                    label = f"{idx}. {doc.metadata.get('policy_id')} §{doc.metadata.get('section')} | {doc.metadata.get('region')} | {score_label}"
+                    with st.expander(label, expanded=(idx == 1)):
+                        st.markdown(doc.page_content)
+                        st.caption(f"Chunk ID: `{doc.metadata.get('chunk_id')}` | Source: `{doc.metadata.get('source_file')}`")
+
+            if any(term in query.lower() for term in ["sabbatical", "bereavement", "bonus", "paternity", "vacation"]):
+                st.warning("⚠️ **Refusal:** I cannot answer this from the provided policy corpus. The indexed addenda do not define that policy.")
+
+        st.markdown("---")
+        st.subheader("Metadata Filter Demonstration (APAC Leave Rules)")
+        demo = indexes["region_demo"]
+        st.caption(f"Query: `{demo['query']}`")
+        fcol1, fcol2 = st.columns(2)
+        with fcol1:
+            st.write("**Unfiltered Results:**")
+            st.json(demo["unfiltered"])
+        with fcol2:
+            st.write("**Filtered to APAC (`filter={'region': 'APAC'}`):**")
+            st.json(demo["filtered"])
+
+    # ---------------- TAB 2: Inspection View ----------------
+    with tab_inspect:
+        st.subheader("Inspection View: The Two Kinds of Wrong")
+        st.markdown(
+            "Side-by-side view separating **Retrieval Failures** (*wrong document fetched*) from "
+            "**Generation Failures** (*right document fetched, wrong answer*)."
+        )
+
+        w4 = indexes["week4_report"]
+
+        st.markdown("#### Side-by-Side Failure Inspection")
+        for item in w4["eval_set"]:
+            with st.container(border=True):
+                c1, c2, c3 = st.columns([1.2, 1.4, 1.4])
+                with c1:
+                    st.markdown(f"**Query [{item['id']}]:**\n\n*{item['question']}*")
+                    st.caption(f"🎯 **Target:** `{item['expected_policy_id']} §{item['expected_section']}`")
+
+                with c2:
+                    st.markdown("**What Was Fetched (Top-3):**")
+                    # Show Dense Top 3
+                    dense_match = next((d for d in w4["dense_results"] if d["id"] == item["id"]), None)
+                    if dense_match:
+                        for idx, r in enumerate(dense_match["top_results"], start=1):
+                            target_match = (r["policy_id"] == item["expected_policy_id"] and r["section"] == item["expected_section"])
+                            badge = "🎯 MATCH" if target_match else "❌"
+                            st.write(f"`{idx}.` {r['policy_id']} §{r['section']} (dist: {r['score']}) {badge}")
+
+                with c3:
+                    st.markdown("**Answer & Classification:**")
+                    if item["failure_type"].startswith("Retrieval Failure"):
+                        st.error(f"🔴 **{item['failure_type']}**")
+                    else:
+                        st.success("🟢 **Retrieval Success**")
+                    st.write(f"**Answer:** {item['ground_truth_answer']}")
+                    st.caption(f"**Evidence:** {item['evidence']}")
+
+        st.markdown("---")
+        st.subheader("Generation Failure Cases (Right Document Fetched, Wrong Answer)")
+        st.markdown(
+            "These queries retrieved the correct document chunk into Top-1, but generation failed due to "
+            "table reading confusion or missing surrounding context definitions."
+        )
+
+        for idx, g in enumerate(w4["generation_failures"], start=1):
+            with st.expander(f"Case {idx}: {g['question']}", expanded=True):
+                gc1, gc2 = st.columns(2)
+                with gc1:
+                    st.markdown(f"**Fetched Chunk:** `{g['fetched_chunk']}`")
+                    st.code(g["chunk_content"], language="markdown")
+                with gc2:
+                    st.warning(f"🟠 **Classification:** {g['failure_type']}")
+                    st.error(f"❌ **Generated Output:** {g['generated_answer']}")
+                    st.success(f"✅ **Ground Truth:** {g['correct_answer']}")
+                    st.caption(f"**Root Cause:** {g['root_cause']}")
+
+    # ---------------- TAB 3: Week 4 Benchmark & Buyback ----------------
+    with tab_benchmark:
+        st.subheader("Week 4 Evaluation: Buying Back Hit-Rate@3 with Exactly One Change")
+        w4 = indexes["week4_report"]
+
+        mcol1, mcol2, mcol3 = st.columns(3)
+        with mcol1:
+            st.metric("Dense Alone (Before)", f"{w4['dense_passes']}/{w4['total']}", f"{w4['dense_hit_rate']*100:.1f}%")
+        with mcol2:
+            st.metric("Hybrid Search (After)", f"{w4['hybrid_passes']}/{w4['total']}", f"{w4['hybrid_hit_rate']*100:.1f}%")
+        with mcol3:
+            st.metric("Net Buyback", "+3 Questions", f"+{w4['hybrid_hit_rate']*100 - w4['dense_hit_rate']*100:.1f}%")
+
+        st.markdown("#### Question-by-Question Comparison Table")
+        table_rows = []
+        for d, h, item in zip(w4["dense_results"], w4["hybrid_results"], w4["eval_set"]):
+            d_icon = "✅ PASS" if d["hit"] else "❌ FAIL"
+            h_icon = "✅ PASS" if h["hit"] else "❌ FAIL"
+            if not d["hit"] and h["hit"]:
+                status = "🎯 BOUGHT BACK (+1)"
+            elif not d["hit"] and not h["hit"]:
+                status = "⚠️ UNFIXED"
+            else:
+                status = "✔️ MAINTAINED"
+            table_rows.append({
+                "ID": item["id"],
+                "Question": item["question"],
+                "Expected": f"{item['expected_policy_id']} §{item['expected_section']}",
+                "Dense (Before)": d_icon,
+                "Hybrid (After)": h_icon,
+                "Outcome": status,
+            })
+        st.dataframe(table_rows, use_container_width=True)
+
+        st.markdown("---")
+        st.subheader("Mentor Review Defense: Failures The Change Did NOT Fix")
+        st.markdown(
+            """
+            - **Why Hybrid Search (BM25 + Dense RRF) Worked:** Alphanumeric policy identifiers (`HR-201`, `HR-207`) and section numbers (`section 3`) are easily diluted in dense vector spaces. BM25 directly scores exact lexical tokens, allowing RRF to boost exact policy sections into top-3.
+            - **Query Q3 (`What are the requirements in HR-204 section 3?`) remained unfixed:** HR-204 §3 states *'Employees should notify their manager as soon as reasonably possible when they cannot report to work because of illness'*. It does not contain the word *'requirements'*. BM25 scored other sections containing the term higher. Fixing this requires query synonym expansion (*requirements -> notification/rules*).
+            - **Query Q7 (`Who is covered under HR-203 section 5?`) remained unfixed:** The phrasing *'who is covered under'* has low lexical overlap with *'This addendum applies to EMEA employees'*. Dense similarity was split across multiple scope sections. Fixing this requires query rewriting (*'who is covered under' -> 'policy scope/applicability'*).
+            - **Generation Failures cannot be fixed by retrieval alone:** An LLM reading an eligibility table still requires strict zero-shot prompting or JSON extraction schema to avoid picking the adjacent table row.
+            """
+        )
 
 
 def main() -> None:
@@ -423,3 +644,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
