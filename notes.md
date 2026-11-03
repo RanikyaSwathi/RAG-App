@@ -166,7 +166,7 @@ Following the open-coding process, the 20 observation sentences clustered into *
   Implement strict pre-retrieval metadata filtering on the employee's authenticated regional profile token (`filter={"region": employee.region}`). For queries lacking explicit region tags, force a disambiguation refusal before falling back to cross-regional chunks.
 - **Falsifiable Quantitative Prediction:**  
   > *"Enforcing strict regional metadata filtering on the employee's region attribute will drop the Cross-Regional Policy Leakage failure mode from 20.0% (4/20) to 0.0% (0/20) on regional queries in the next random 20-trace audit, while maintaining hit-rate@3 above 85.0% on valid regional inquiries."*
-- **Git Commit Hash:** `[PENDING_GIT_COMMIT]` *(Recorded immediately upon initial commit)*
+- **Git Commit Hash:** `2125d6a163eebe94751c106a3d006dc7a3c7f4d1` (Short hash: `2125d6a`)
 
 ---
 
