@@ -233,3 +233,78 @@ I am keeping the structure-aware chunker. It preserves the section heading toget
 +     metadata['chunk_id'] = f"{metadata.get('policy_id','UNKNOWN')}-chunk-{len(chunks)+1:04d}"
 ```
 
+---
+# Week 4: Debugging Retrieval — Hybrid, Reranking & Failure Separation (Track C)
+
+## 9) Failure Separation: Two Kinds of Wrong
+
+We classify failures into two strictly separated categories:
+1. **Wrong document fetched (Retrieval Failure)**: The retriever failed to include the authoritative policy section in top-3 candidates.
+2. **Right document, wrong answer (Generation Failure)**: The retriever successfully fetched the exact chunk in top-3, but generation misinterpreted the table or was stranded without definitions.
+
+### Evaluation Set Classification (k=3)
+
+| ID | Question | Expected Policy | Failure Classification | Diagnosis & Evidence |
+|---|---|---|---|---|
+| Q1 | What are the rules in section 3 of policy HR-201? | HR-201 §3 | Retrieval Failure | Dense vector search returned HR-203 §4 and HR-202 §3 because embeddings drifted on generic terms ('rules in section 3') while missing the exact code 'HR-201'. |
+| Q2 | HR-202 section 1 eligibility | HR-202 §1 | None (Success) | Dense search captures the semantic meaning of eligibility in remote work, ranking HR-202 §1 in the top 3. |
+| Q3 | What are the requirements in HR-204 section 3? | HR-204 §3 | Retrieval Failure (Unfixed) | HR-204 §3 describes illness notification without using the word 'requirements'. Both dense search and BM25 rank other sections higher. |
+| Q4 | What is the expense submission timeframe in HR-205 section 4? | HR-205 §4 | None (Success) | Semantic and keyword terms align strongly with expense submission timelines, retrieving HR-205 §4 at rank 1. |
+| Q5 | What does HR-207 section 4 mandate regarding probation? | HR-207 §4 | Retrieval Failure | Dense search confused probation reviews with leave tables (HR-207 §2). BM25 restored HR-207 §4 to rank 1 via exact section keyword matching. |
+| Q6 | Policy HR-202 scope | HR-202 §5 | Retrieval Failure | Dense search ranked AMER scope (HR-204 §5) first because generic 'scope' embeddings overlap. Exact keyword 'HR-202' allowed BM25 to rank HR-202 §5 in top 3. |
+| Q7 | Who is covered under HR-203 section 5? | HR-203 §5 | Retrieval Failure (Unfixed) | HR-203 §5 states 'This addendum applies to EMEA employees'. The phrasing 'who is covered under' has insufficient lexical overlap with 'applies to'. |
+| Q8 | What is the standard daily meal allowance for a business trip? | HR-205 §2 | None (Success) | Strong semantic similarity for travel meal allowances retrieves HR-205 §2 at rank 1 across both systems. |
+| Q9 | How many days per week may an eligible employee work remotely? | HR-202 §2 | None (Success) | Direct semantic match to weekly remote work limit retrieves HR-202 §2 at rank 1. |
+| Q10 | How long is the normal probation period for a new regular employee? | HR-207 §1 | None (Success) | Clear semantic match for probation period length retrieves HR-207 §1 at rank 1. |
+
+### Generation Failure Examples (Right Document Fetched, Wrong Answer)
+
+#### Case 1: What is the annual leave carry-over cap for an employee with 2 months of service?
+- **Fetched Chunk:** `HR-207-chunk-0026 (HR-207 §2)`
+- **Failure Type:** Right Document, Wrong Answer (Generation Failure)
+- **Generated Output:** *"An employee with 2 months of service is allowed to carry over 2 days of annual leave."*
+- **Correct Truth:** *"0 days. According to HR-207 §2, probationary employees with less than 3 months of completed service have a carry-over cap of 0 days."*
+- **Root Cause:** The retriever successfully fetched the exact eligibility table chunk in top-1, but the LLM read the wrong table row (confusing 'less than 3 months' with '3 to less than 6 months').
+
+#### Case 2: Under what condition does continuous service grant 18 days of annual leave?
+- **Fetched Chunk:** `HR-201-chunk-0001 (HR-201 §1)`
+- **Failure Type:** Right Document, Wrong Answer (Generation Failure)
+- **Generated Output:** *"Continuous service of 3 years grants 18 days, but what constitutes continuous service is not explained."*
+- **Correct Truth:** *"3 years or more of completed service for regular employees (definition of continuous service is in base handbook)."*
+- **Root Cause:** The tight chunking strategy retrieved the isolated clause without the surrounding global definition of continuous service, stranding the generator.
+
+## 10) Before-and-After Hit-Rate@3 (Buyback with Exactly One Change)
+
+### Exactly One Change Made: Hybrid Search with BM25 + Dense RRF
+Dense vector embeddings struggle with exact alphanumeric codes (`HR-201`, `HR-207`) and section numbers (`section 3`). We added **Hybrid Search (BM25 keyword search fused with Dense Chroma similarity via Reciprocal Rank Fusion - RRF)** as our single algorithmic change.
+
+- **Before (Dense Vector Search alone) hit-rate@3:** 5/10 (50.0%)
+- **After (Hybrid Search BM25 + Dense RRF) hit-rate@3:** 8/10 (80.0%)
+- **Net Hit-Rate@3 Buyback:** +30.0% (+3 queries bought back)
+
+| ID | Question | Expected Target | Dense (Before) | Hybrid (After) | Buyback Status |
+|---|---|---|---|---|---|
+| Q1 | What are the rules in section 3 of policy HR-201? | HR-201 §3 | ❌ | ✅ | Bought Back (+1) |
+| Q2 | HR-202 section 1 eligibility | HR-202 §1 | ✅ | ✅ | Maintained (1) |
+| Q3 | What are the requirements in HR-204 section 3? | HR-204 §3 | ❌ | ❌ | Unfixed (0) |
+| Q4 | What is the expense submission timeframe in HR-205 section 4? | HR-205 §4 | ✅ | ✅ | Maintained (1) |
+| Q5 | What does HR-207 section 4 mandate regarding probation? | HR-207 §4 | ❌ | ✅ | Bought Back (+1) |
+| Q6 | Policy HR-202 scope | HR-202 §5 | ❌ | ✅ | Bought Back (+1) |
+| Q7 | Who is covered under HR-203 section 5? | HR-203 §5 | ❌ | ❌ | Unfixed (0) |
+| Q8 | What is the standard daily meal allowance for a business trip? | HR-205 §2 | ✅ | ✅ | Maintained (1) |
+| Q9 | How many days per week may an eligible employee work remotely? | HR-202 §2 | ✅ | ✅ | Maintained (1) |
+| Q10 | How long is the normal probation period for a new regular employee? | HR-207 §1 | ✅ | ✅ | Maintained (1) |
+
+## 11) Failures The Change Did NOT Fix
+
+1. **Q3 ('What are the requirements in HR-204 section 3?'):**
+   - *Expected:* HR-204 §3 (Notification: 'Employees should notify their manager as soon as reasonably possible when they cannot report to work because of illness.').
+   - *Diagnosis:* The text in HR-204 §3 describes the notification procedure without containing the explicit lexical token 'requirements'. Consequently, BM25 assigned higher scores to other sections containing 'requirements', and dense embeddings drifted. Fixing this would require query expansion/synonym mapping ('requirements' -> 'procedure/notice').
+
+2. **Q7 ('Who is covered under HR-203 section 5?'):**
+   - *Expected:* HR-203 §5 (Scope: 'This addendum applies to EMEA employees.').
+   - *Diagnosis:* The phrase 'who is covered under' lacks exact lexical overlap with 'applies to', causing both BM25 and dense embeddings to rank HR-203 §4 and other scope sections ahead. Fixing this requires query rewriting to align 'covered under' with policy 'scope / applicability'.
+
+3. **Generation Failures (Table row reading):**
+   - Hybrid search bought back document retrieval, but cannot prevent an LLM from reading the wrong row of an eligibility table without structured table schema prompts.
+
